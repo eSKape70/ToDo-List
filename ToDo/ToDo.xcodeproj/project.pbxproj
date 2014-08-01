@@ -16,13 +16,23 @@
 		BD2054AA198A7D8E0047DD07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD20548D198A7D8D0047DD07 /* UIKit.framework */; };
 		BD2054AB198A7D8E0047DD07 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD20548F198A7D8D0047DD07 /* CoreData.framework */; };
 		BD2054B3198A7D8E0047DD07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2054B1198A7D8E0047DD07 /* InfoPlist.strings */; };
-		BD2054B5198A7D8E0047DD07 /* ToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054B4198A7D8E0047DD07 /* ToDoTests.m */; };
 		BD2054C6198A802D0047DD07 /* TODOStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054C5198A802D0047DD07 /* TODOStorageManager.m */; };
 		BD2054D4198A80B30047DD07 /* TODOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054CE198A80B30047DD07 /* TODOAppDelegate.m */; };
 		BD2054D5198A80B30047DD07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2054D0198A80B30047DD07 /* Images.xcassets */; };
-		BD2054E3198B88420047DD07 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD20549D198A7D8E0047DD07 /* ToDo.xcdatamodeld */; };
 		BD2054EA198B88820047DD07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2054E5198B88820047DD07 /* InfoPlist.strings */; };
 		BD2054EB198B88820047DD07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054E7198B88820047DD07 /* main.m */; };
+		BD2054F7198B955C0047DD07 /* TODOTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F5198B955C0047DD07 /* TODOTaskListViewController.m */; };
+		BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */; };
+		BD2054FB198B9D560047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
+		BD2054FE198BA2AB0047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
+		BD205501198BA2AC0047DD07 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205500198BA2AC0047DD07 /* User.m */; };
+		BD205504198BA3A50047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
+		BD205507198BA7750047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
+		BD205508198BA7750047DD07 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205500198BA2AC0047DD07 /* User.m */; };
+		BD205509198BA7750047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
+		BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054C5198A802D0047DD07 /* TODOStorageManager.m */; };
+		BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD20550D198BAE3D0047DD07 /* UserTests.m */; };
+		BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +51,10 @@
 		BD20548B198A7D8D0047DD07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD20548D198A7D8D0047DD07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD20548F198A7D8D0047DD07 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BD20549E198A7D8E0047DD07 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 		BD2054A6198A7D8E0047DD07 /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2054A7198A7D8E0047DD07 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD2054B0198A7D8E0047DD07 /* ToDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoTests-Info.plist"; sourceTree = "<group>"; };
 		BD2054B2198A7D8E0047DD07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BD2054B4198A7D8E0047DD07 /* ToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTests.m; sourceTree = "<group>"; };
 		BD2054C4198A802D0047DD07 /* TODOStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOStorageManager.h; sourceTree = "<group>"; };
 		BD2054C5198A802D0047DD07 /* TODOStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOStorageManager.m; sourceTree = "<group>"; };
 		BD2054CD198A80B30047DD07 /* TODOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOAppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +64,19 @@
 		BD2054E7198B88820047DD07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ToDo/main.m; sourceTree = SOURCE_ROOT; };
 		BD2054E8198B88820047DD07 /* ToDo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ToDo-Info.plist"; path = "ToDo/ToDo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		BD2054E9198B88820047DD07 /* ToDo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ToDo-Prefix.pch"; path = "ToDo/ToDo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		BD2054F2198B93980047DD07 /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
+		BD2054F3198B94020047DD07 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BD2054F4198B955C0047DD07 /* TODOTaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOTaskListViewController.h; sourceTree = "<group>"; };
+		BD2054F5198B955C0047DD07 /* TODOTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOTaskListViewController.m; sourceTree = "<group>"; };
+		BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TODOTaskListViewController.xib; sourceTree = "<group>"; };
+		BD2054FA198B9D560047DD07 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BD2054FC198BA2AB0047DD07 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		BD2054FD198BA2AB0047DD07 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		BD2054FF198BA2AC0047DD07 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BD205500198BA2AC0047DD07 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BD205502198BA3A50047DD07 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		BD205503198BA3A50047DD07 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		BD20550D198BAE3D0047DD07 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +154,7 @@
 		BD2054AE198A7D8E0047DD07 /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD2054B4198A7D8E0047DD07 /* ToDoTests.m */,
+				BD20550D198BAE3D0047DD07 /* UserTests.m */,
 				BD2054AF198A7D8E0047DD07 /* Supporting Files */,
 			);
 			path = ToDoTests;
@@ -161,7 +182,13 @@
 		BD2054C3198A802D0047DD07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD20549D198A7D8E0047DD07 /* ToDo.xcdatamodeld */,
+				BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */,
+				BD205502198BA3A50047DD07 /* Base.h */,
+				BD205503198BA3A50047DD07 /* Base.m */,
+				BD2054FF198BA2AC0047DD07 /* User.h */,
+				BD205500198BA2AC0047DD07 /* User.m */,
+				BD2054FC198BA2AB0047DD07 /* Task.h */,
+				BD2054FD198BA2AB0047DD07 /* Task.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +224,9 @@
 		BD2054DF198A80FC0047DD07 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD2054F4198B955C0047DD07 /* TODOTaskListViewController.h */,
+				BD2054F5198B955C0047DD07 /* TODOTaskListViewController.m */,
+				BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +257,8 @@
 		BD2054EE198B8FF30047DD07 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BD2054F2198B93980047DD07 /* Headers.h */,
+				BD2054F3198B94020047DD07 /* Constants.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */,
 				BD2054D5198A80B30047DD07 /* Images.xcassets in Resources */,
 				BD2054EA198B88820047DD07 /* InfoPlist.strings in Resources */,
 			);
@@ -327,9 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2054E3198B88420047DD07 /* ToDo.xcdatamodeld in Sources */,
+				BD2054F7198B955C0047DD07 /* TODOTaskListViewController.m in Sources */,
+				BD205501198BA2AC0047DD07 /* User.m in Sources */,
 				BD2054C6198A802D0047DD07 /* TODOStorageManager.m in Sources */,
+				BD2054FB198B9D560047DD07 /* Model.xcdatamodeld in Sources */,
+				BD205504198BA3A50047DD07 /* Base.m in Sources */,
 				BD2054EB198B88820047DD07 /* main.m in Sources */,
+				BD2054FE198BA2AB0047DD07 /* Task.m in Sources */,
 				BD2054D4198A80B30047DD07 /* TODOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +375,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD2054B5198A7D8E0047DD07 /* ToDoTests.m in Sources */,
+				BD205509198BA7750047DD07 /* Task.m in Sources */,
+				BD205507198BA7750047DD07 /* Base.m in Sources */,
+				BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */,
+				BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */,
+				BD205508198BA7750047DD07 /* User.m in Sources */,
+				BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,14 +584,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BD20549D198A7D8E0047DD07 /* ToDo.xcdatamodeld */ = {
+		BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BD20549E198A7D8E0047DD07 /* ToDo.xcdatamodel */,
+				BD2054FA198B9D560047DD07 /* Model.xcdatamodel */,
 			);
-			currentVersion = BD20549E198A7D8E0047DD07 /* ToDo.xcdatamodel */;
-			name = ToDo.xcdatamodeld;
-			path = ../../ToDo.xcdatamodeld;
+			currentVersion = BD2054FA198B9D560047DD07 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
