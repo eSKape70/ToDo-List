@@ -16,6 +16,15 @@
 #import "Task.h"
 
 //View Controllers
+#import "TODOTaskManagerViewController.h"
+#import "TODOContainerViewController.h"
 #import "TODOTaskListViewController.h"
+
+//Categories
+#import "UIColor+TODOColors.h"
+#import "UIFont+TODOFont.h"
+
+//Others
+#import "Constants.h"
 
 #endif

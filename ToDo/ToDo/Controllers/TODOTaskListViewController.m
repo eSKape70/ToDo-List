@@ -10,11 +10,14 @@
 
 @interface TODOTaskListViewController ()
 
+@property (strong, nonatomic) NSMutableArray *allTasks;
+
 @end
 
 @implementation TODOTaskListViewController
 
 @synthesize tableView;
+@synthesize allTasks;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,11 +32,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  User *user = [User findOrCreate:@{@"userID":@"testID"}];
-  user.alias = @"alias1";
-  user.email = @"email1";
-  [user save];
-  [user remove];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,17 +39,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)reloadAllData {
+  allTasks = [[NSMutableArray alloc] initWithArray:[Task all]];
+}
 #pragma mark - Table View Data Source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   //TODO
-  return 0;
+  return [allTasks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   //TODO
-  return nil;
+  Task *task = [allTasks objectAtIndex:indexPath.row];
+  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TASK_CELL_IDENTIFIER];
+  cell.textLabel.text = task.title;
+  return cell;
 }
 
 @end

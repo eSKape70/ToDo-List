@@ -18,9 +18,8 @@
 //  self.window.backgroundColor = [UIColor whiteColor];
 //  [self.window makeKeyAndVisible];
   
-  TODOTaskListViewController *viewController = [[TODOTaskListViewController alloc] initWithNibName:@"TODOTaskListViewController" bundle:nil];
-  _navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-  self.window.rootViewController = _navigationController;
+  TODOContainerViewController *viewController = [[TODOContainerViewController alloc] initWithNibName:@"TODOContainerViewController" bundle:nil];
+  self.window.rootViewController = viewController;
   [self.window makeKeyAndVisible];
 
   return YES;

@@ -9,6 +9,6 @@
 #ifndef ToDo_Constants_h
 #define ToDo_Constants_h
 
-
+#define TASK_CELL_IDENTIFIER @"taskCell"
 
 #endif
