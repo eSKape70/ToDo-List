@@ -23,6 +23,7 @@
 //Categories
 #import "UIColor+TODOColors.h"
 #import "UIFont+TODOFont.h"
+#import "UIImageView+TODOBackgroundImage.h"
 
 //Others
 #import "Constants.h"

@@ -88,7 +88,10 @@
   
   return object;
 }
-
++ (id)create {
+  id object = [[self class] new];
+  return object;
+}
 + (NSArray *)find:(NSDictionary *)params
 {
   NSMutableArray* values = [[NSMutableArray alloc] init];

@@ -1,5 +1,5 @@
 //
-//  UIColor+TODOColors.h
+//  UIImageView+TODOBackgroundImage.h
 //  ToDo
 //
 //  Created by Gemini - Alex on 02/08/14.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor (TODOColors)
+@interface UIImageView (TODOBackgroundImage)
 
-+(UIColor*)semiTransparentLightColor;
-+(UIColor*)semiTransparentDarkColor;
+-(void)adjustLayerForPercent:(CGFloat)percent;
 
 @end

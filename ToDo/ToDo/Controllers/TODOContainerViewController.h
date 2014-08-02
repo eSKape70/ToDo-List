@@ -12,6 +12,8 @@
   IBOutlet UIView *container;
 }
 
++ (TODOContainerViewController*)singleton;
+
 -(IBAction)goToListPressed:(id)sender;
 -(IBAction)addTaskPressed:(id)sender;
 

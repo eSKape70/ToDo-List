@@ -12,7 +12,7 @@
 
 @interface Task : Base
 
-@property (nonatomic, retain) NSString * id;
+@property (nonatomic, retain) NSString * taskID;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * location;
 @property (nonatomic, retain) NSString * parent;

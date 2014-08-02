@@ -18,8 +18,7 @@
 //  self.window.backgroundColor = [UIColor whiteColor];
 //  [self.window makeKeyAndVisible];
   
-  TODOContainerViewController *viewController = [[TODOContainerViewController alloc] initWithNibName:@"TODOContainerViewController" bundle:nil];
-  self.window.rootViewController = viewController;
+  self.window.rootViewController = [TODOContainerViewController singleton];
   [self.window makeKeyAndVisible];
 
   return YES;

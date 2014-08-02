@@ -38,8 +38,15 @@
 		BD3F6EA8198D6BAF00DFECD9 /* TODOTaskManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6EA6198D6BAF00DFECD9 /* TODOTaskManagerViewController.m */; };
 		BD3F6EA9198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EA7198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib */; };
 		BD3F6EAC198D6DD400DFECD9 /* UIFont+TODOFont.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6EAB198D6DD400DFECD9 /* UIFont+TODOFont.m */; };
-		BDBA0FF3198BD7CB001A0A27 /* topPullBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBA0FF1198BD7CB001A0A27 /* topPullBackground@2x.png */; };
-		BDBA0FF4198BD7CB001A0A27 /* topPullBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BDBA0FF2198BD7CB001A0A27 /* topPullBackground.png */; };
+		BD3F6EB5198D7DD600DFECD9 /* HomeMenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EAD198D7DD600DFECD9 /* HomeMenuIcon.png */; };
+		BD3F6EB6198D7DD600DFECD9 /* HomeMenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EAE198D7DD600DFECD9 /* HomeMenuIcon@2x.png */; };
+		BD3F6EB7198D7DD600DFECD9 /* SettingsMenuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EAF198D7DD600DFECD9 /* SettingsMenuIcon.png */; };
+		BD3F6EB8198D7DD600DFECD9 /* SettingsMenuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB0198D7DD600DFECD9 /* SettingsMenuIcon@2x.png */; };
+		BD3F6EB9198D7DD600DFECD9 /* ShoppingList_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB1198D7DD600DFECD9 /* ShoppingList_Icon.png */; };
+		BD3F6EBA198D7DD600DFECD9 /* ShoppingList_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB2198D7DD600DFECD9 /* ShoppingList_Icon@2x.png */; };
+		BD3F6EBB198D7DD600DFECD9 /* taskListBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB3198D7DD600DFECD9 /* taskListBackgroundImage.png */; };
+		BD3F6EBC198D7DD600DFECD9 /* taskListBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB4198D7DD600DFECD9 /* taskListBackgroundImage@2x.png */; };
+		BD3F6EBF198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +100,16 @@
 		BD3F6EA7198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TODOTaskManagerViewController.xib; sourceTree = "<group>"; };
 		BD3F6EAA198D6DD400DFECD9 /* UIFont+TODOFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TODOFont.h"; sourceTree = "<group>"; };
 		BD3F6EAB198D6DD400DFECD9 /* UIFont+TODOFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TODOFont.m"; sourceTree = "<group>"; };
-		BDBA0FF1198BD7CB001A0A27 /* topPullBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topPullBackground@2x.png"; sourceTree = "<group>"; };
-		BDBA0FF2198BD7CB001A0A27 /* topPullBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topPullBackground.png; sourceTree = "<group>"; };
+		BD3F6EAD198D7DD600DFECD9 /* HomeMenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeMenuIcon.png; sourceTree = "<group>"; };
+		BD3F6EAE198D7DD600DFECD9 /* HomeMenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HomeMenuIcon@2x.png"; sourceTree = "<group>"; };
+		BD3F6EAF198D7DD600DFECD9 /* SettingsMenuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsMenuIcon.png; sourceTree = "<group>"; };
+		BD3F6EB0198D7DD600DFECD9 /* SettingsMenuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SettingsMenuIcon@2x.png"; sourceTree = "<group>"; };
+		BD3F6EB1198D7DD600DFECD9 /* ShoppingList_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShoppingList_Icon.png; sourceTree = "<group>"; };
+		BD3F6EB2198D7DD600DFECD9 /* ShoppingList_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShoppingList_Icon@2x.png"; sourceTree = "<group>"; };
+		BD3F6EB3198D7DD600DFECD9 /* taskListBackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskListBackgroundImage.png; sourceTree = "<group>"; };
+		BD3F6EB4198D7DD600DFECD9 /* taskListBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taskListBackgroundImage@2x.png"; sourceTree = "<group>"; };
+		BD3F6EBD198D817000DFECD9 /* UIImageView+TODOBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TODOBackgroundImage.h"; sourceTree = "<group>"; };
+		BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TODOBackgroundImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +239,14 @@
 		BD2054CF198A80B30047DD07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BDBA0FF1198BD7CB001A0A27 /* topPullBackground@2x.png */,
-				BDBA0FF2198BD7CB001A0A27 /* topPullBackground.png */,
+				BD3F6EAD198D7DD600DFECD9 /* HomeMenuIcon.png */,
+				BD3F6EAE198D7DD600DFECD9 /* HomeMenuIcon@2x.png */,
+				BD3F6EAF198D7DD600DFECD9 /* SettingsMenuIcon.png */,
+				BD3F6EB0198D7DD600DFECD9 /* SettingsMenuIcon@2x.png */,
+				BD3F6EB1198D7DD600DFECD9 /* ShoppingList_Icon.png */,
+				BD3F6EB2198D7DD600DFECD9 /* ShoppingList_Icon@2x.png */,
+				BD3F6EB3198D7DD600DFECD9 /* taskListBackgroundImage.png */,
+				BD3F6EB4198D7DD600DFECD9 /* taskListBackgroundImage@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -296,6 +317,8 @@
 				BD3F6E9E198D655E00DFECD9 /* UIColor+TODOColors.m */,
 				BD3F6EAA198D6DD400DFECD9 /* UIFont+TODOFont.h */,
 				BD3F6EAB198D6DD400DFECD9 /* UIFont+TODOFont.m */,
+				BD3F6EBD198D817000DFECD9 /* UIImageView+TODOBackgroundImage.h */,
+				BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -377,11 +400,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */,
+				BD3F6EBC198D7DD600DFECD9 /* taskListBackgroundImage@2x.png in Resources */,
+				BD3F6EBA198D7DD600DFECD9 /* ShoppingList_Icon@2x.png in Resources */,
+				BD3F6EB5198D7DD600DFECD9 /* HomeMenuIcon.png in Resources */,
 				BD3F6EA9198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib in Resources */,
-				BDBA0FF4198BD7CB001A0A27 /* topPullBackground.png in Resources */,
+				BD3F6EB8198D7DD600DFECD9 /* SettingsMenuIcon@2x.png in Resources */,
 				BD3F6EA4198D670A00DFECD9 /* TODOContainerViewController.xib in Resources */,
-				BDBA0FF3198BD7CB001A0A27 /* topPullBackground@2x.png in Resources */,
+				BD3F6EB7198D7DD600DFECD9 /* SettingsMenuIcon.png in Resources */,
+				BD3F6EB9198D7DD600DFECD9 /* ShoppingList_Icon.png in Resources */,
 				BD2054EA198B88820047DD07 /* InfoPlist.strings in Resources */,
+				BD3F6EBB198D7DD600DFECD9 /* taskListBackgroundImage.png in Resources */,
+				BD3F6EB6198D7DD600DFECD9 /* HomeMenuIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +439,7 @@
 				BD205504198BA3A50047DD07 /* Base.m in Sources */,
 				BD2054EB198B88820047DD07 /* main.m in Sources */,
 				BD3F6EAC198D6DD400DFECD9 /* UIFont+TODOFont.m in Sources */,
+				BD3F6EBF198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m in Sources */,
 				BD2054FE198BA2AB0047DD07 /* Task.m in Sources */,
 				BD2054D4198A80B30047DD07 /* TODOAppDelegate.m in Sources */,
 			);

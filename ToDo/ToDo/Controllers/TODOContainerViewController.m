@@ -20,6 +20,15 @@
 
 @implementation TODOContainerViewController
 
++ (TODOContainerViewController*)singleton{
+  static dispatch_once_t pred;
+  static TODOContainerViewController* shared = nil;
+  dispatch_once(&pred, ^{
+    shared = [[TODOContainerViewController alloc] initWithNibName:@"TODOContainerViewController" bundle:nil];
+  });
+  return shared;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,7 +42,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  
+  [self goToListPressed:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,20 +59,24 @@
     currentDetailViewController = viewController;
     return;
   }
-  if (isSwitchingVC) {
+  if (isSwitchingVC || currentDetailViewController==viewController) {
     return;
   }
   isSwitchingVC = YES;
-  [viewController willMoveToParentViewController:nil];
   viewController.view.frame = CGRectMake(0, 0, container.bounds.size.width, container.bounds.size.height);
   viewController.view.alpha = 0.0;
   [container addSubview:viewController.view];
+  
+  [currentDetailViewController viewWillDisappear:YES];
+  [viewController viewWillAppear:YES];
   
   [UIView animateWithDuration:.3
                    animations:^{
                      currentDetailViewController.view.alpha = 0.0;
                      viewController.view.alpha = 1.0;
                    } completion:^(BOOL finished) {
+                     [currentDetailViewController viewDidDisappear:YES];
+                     [currentDetailViewController.view removeFromSuperview];
                      currentDetailViewController = viewController;
                      isSwitchingVC = NO;
                    }];

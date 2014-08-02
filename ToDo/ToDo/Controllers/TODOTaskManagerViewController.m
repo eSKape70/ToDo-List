@@ -29,7 +29,12 @@
     // Do any additional setup after loading the view from its nib.
   [self customiseView];
 }
-
+- (void)viewWillDisappear:(BOOL)animated {
+  [self hideKeyboard];
+}
+- (void)viewDidDisappear:(BOOL)animated {
+  [self cleanView];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -47,10 +52,34 @@
 #pragma mark - Buttons Actions 
 
 -(IBAction)doneBtnPressed:(id)sender {
+  if (![self checkData]) {
+    return;
+  }  
+  Task* newTask = [Task new];
+  newTask.title = taskTitle.text;
+  newTask.note = taskDescription.text;
+  [newTask save];
   
+  [self cancelBtnPressed:nil];
 }
 -(IBAction)cancelBtnPressed:(id)sender {
-  
+  [[TODOContainerViewController singleton] goToListPressed:nil];
 }
+#pragma mark - Helpers
 
+- (BOOL)checkData {
+    //check if task is valid for saving
+  if (![taskTitle.text length]) {
+    return NO;
+  }
+  return YES;
+}
+- (void)hideKeyboard {
+  [taskTitle resignFirstResponder];
+  [taskDescription resignFirstResponder];
+}
+- (void)cleanView {
+  taskTitle.text = @"";
+  taskDescription.text = @"";
+}
 @end

@@ -11,7 +11,7 @@
 
 @implementation Task
 
-@dynamic id;
+@dynamic taskID;
 @dynamic title;
 @dynamic location;
 @dynamic parent;

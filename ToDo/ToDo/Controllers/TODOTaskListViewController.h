@@ -13,5 +13,6 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end

@@ -31,6 +31,14 @@
   [super tearDown];
 }
 
+- (void)testCreate {
+  User *user = [User new];
+  user.alias = @"alias1";
+  user.email = @"email1";
+  [user save];
+  XCTAssertNotNil(user, @"new issue");
+}
+
 - (void)testFindOrCreate {
   User *user = [User findOrCreate:@{@"userID":@"testID"}];
   user.alias = @"alias1";
