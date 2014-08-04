@@ -12,6 +12,7 @@
 
   TODOTaskListViewController *taskListVC;
   TODOTaskManagerViewController *taskManagerVC;
+  TODOUserViewController *userVC;
   
   BOOL isSwitchingVC;
   UIViewController *currentDetailViewController;
@@ -96,5 +97,12 @@
     taskManagerVC = [[TODOTaskManagerViewController alloc] initWithNibName:@"TODOTaskManagerViewController" bundle:nil];
   }
   [self swapCurrentControllerWith:taskManagerVC];
+}
+
+-(IBAction)goToUserPressed:(id)sender {
+  if (!userVC) {
+    userVC = [[TODOUserViewController alloc] initWithNibName:@"TODOUserViewController" bundle:nil];
+  }
+  [self swapCurrentControllerWith:userVC];
 }
 @end

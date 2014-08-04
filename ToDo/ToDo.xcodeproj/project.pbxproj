@@ -24,10 +24,8 @@
 		BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */; };
 		BD2054FB198B9D560047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
 		BD2054FE198BA2AB0047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
-		BD205501198BA2AC0047DD07 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205500198BA2AC0047DD07 /* User.m */; };
 		BD205504198BA3A50047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
 		BD205507198BA7750047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
-		BD205508198BA7750047DD07 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205500198BA2AC0047DD07 /* User.m */; };
 		BD205509198BA7750047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
 		BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054C5198A802D0047DD07 /* TODOStorageManager.m */; };
 		BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD20550D198BAE3D0047DD07 /* UserTests.m */; };
@@ -47,6 +45,18 @@
 		BD3F6EBB198D7DD600DFECD9 /* taskListBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB3198D7DD600DFECD9 /* taskListBackgroundImage.png */; };
 		BD3F6EBC198D7DD600DFECD9 /* taskListBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EB4198D7DD600DFECD9 /* taskListBackgroundImage@2x.png */; };
 		BD3F6EBF198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */; };
+		BD697E27198F79BA00D61717 /* TODOURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BD697E26198F79BA00D61717 /* TODOURLConnection.m */; };
+		BD697E2A198F7CDB00D61717 /* TODOAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BD697E29198F7CDB00D61717 /* TODOAPI.m */; };
+		BD697E32198F7F6500D61717 /* TODOUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD697E30198F7F6500D61717 /* TODOUserViewController.m */; };
+		BD697E33198F7F6500D61717 /* TODOUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD697E31198F7F6500D61717 /* TODOUserViewController.xib */; };
+		BDAE163B198F8755008D7AF6 /* TODOUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE163A198F8755008D7AF6 /* TODOUserManager.m */; };
+		BDAE163C198F8755008D7AF6 /* TODOUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE163A198F8755008D7AF6 /* TODOUserManager.m */; };
+		BDAE1648198F8C5E008D7AF6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE1647198F8C5E008D7AF6 /* User.m */; };
+		BDAE1649198F8C5E008D7AF6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE1647198F8C5E008D7AF6 /* User.m */; };
+		BDAE164C198F9569008D7AF6 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164B198F9569008D7AF6 /* NSString+Additions.m */; };
+		BDAE164D198F9569008D7AF6 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164B198F9569008D7AF6 /* NSString+Additions.m */; };
+		BDAE1650198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */; };
+		BDAE1651198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +95,6 @@
 		BD2054FA198B9D560047DD07 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BD2054FC198BA2AB0047DD07 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		BD2054FD198BA2AB0047DD07 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
-		BD2054FF198BA2AC0047DD07 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		BD205500198BA2AC0047DD07 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BD205502198BA3A50047DD07 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		BD205503198BA3A50047DD07 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
 		BD20550D198BAE3D0047DD07 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
@@ -110,6 +118,22 @@
 		BD3F6EB4198D7DD600DFECD9 /* taskListBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taskListBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		BD3F6EBD198D817000DFECD9 /* UIImageView+TODOBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TODOBackgroundImage.h"; sourceTree = "<group>"; };
 		BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TODOBackgroundImage.m"; sourceTree = "<group>"; };
+		BD697E25198F79BA00D61717 /* TODOURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOURLConnection.h; sourceTree = "<group>"; };
+		BD697E26198F79BA00D61717 /* TODOURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOURLConnection.m; sourceTree = "<group>"; };
+		BD697E28198F7CDB00D61717 /* TODOAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOAPI.h; sourceTree = "<group>"; };
+		BD697E29198F7CDB00D61717 /* TODOAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOAPI.m; sourceTree = "<group>"; };
+		BD697E2F198F7F6500D61717 /* TODOUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOUserViewController.h; sourceTree = "<group>"; };
+		BD697E30198F7F6500D61717 /* TODOUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOUserViewController.m; sourceTree = "<group>"; };
+		BD697E31198F7F6500D61717 /* TODOUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TODOUserViewController.xib; sourceTree = "<group>"; };
+		BDAE1639198F8755008D7AF6 /* TODOUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOUserManager.h; sourceTree = "<group>"; };
+		BDAE163A198F8755008D7AF6 /* TODOUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOUserManager.m; sourceTree = "<group>"; };
+		BDAE163D198F8AB4008D7AF6 /* UserAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserAPI.xcdatamodel; sourceTree = "<group>"; };
+		BDAE1646198F8C5E008D7AF6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BDAE1647198F8C5E008D7AF6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BDAE164A198F9569008D7AF6 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		BDAE164B198F9569008D7AF6 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		BDAE164E198F9ACA008D7AF6 /* TODOURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOURLResponse.h; sourceTree = "<group>"; };
+		BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOURLResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +233,8 @@
 				BD2054C3198A802D0047DD07 /* Model */,
 				BD2054C4198A802D0047DD07 /* TODOStorageManager.h */,
 				BD2054C5198A802D0047DD07 /* TODOStorageManager.m */,
+				BDAE1639198F8755008D7AF6 /* TODOUserManager.h */,
+				BDAE163A198F8755008D7AF6 /* TODOUserManager.m */,
 			);
 			path = "Storage Manager";
 			sourceTree = "<group>";
@@ -217,10 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */,
+				BDAE1646198F8C5E008D7AF6 /* User.h */,
+				BDAE1647198F8C5E008D7AF6 /* User.m */,
 				BD205502198BA3A50047DD07 /* Base.h */,
 				BD205503198BA3A50047DD07 /* Base.m */,
-				BD2054FF198BA2AC0047DD07 /* User.h */,
-				BD205500198BA2AC0047DD07 /* User.m */,
 				BD2054FC198BA2AB0047DD07 /* Task.h */,
 				BD2054FD198BA2AB0047DD07 /* Task.m */,
 			);
@@ -274,6 +300,9 @@
 				BD3F6EA5198D6BAF00DFECD9 /* TODOTaskManagerViewController.h */,
 				BD3F6EA6198D6BAF00DFECD9 /* TODOTaskManagerViewController.m */,
 				BD3F6EA7198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib */,
+				BD697E2F198F7F6500D61717 /* TODOUserViewController.h */,
+				BD697E30198F7F6500D61717 /* TODOUserViewController.m */,
+				BD697E31198F7F6500D61717 /* TODOUserViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +326,12 @@
 		BD2054ED198B8FF30047DD07 /* Conectivity */ = {
 			isa = PBXGroup;
 			children = (
+				BD697E25198F79BA00D61717 /* TODOURLConnection.h */,
+				BD697E26198F79BA00D61717 /* TODOURLConnection.m */,
+				BD697E28198F7CDB00D61717 /* TODOAPI.h */,
+				BD697E29198F7CDB00D61717 /* TODOAPI.m */,
+				BDAE164E198F9ACA008D7AF6 /* TODOURLResponse.h */,
+				BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */,
 			);
 			path = Conectivity;
 			sourceTree = "<group>";
@@ -319,6 +354,8 @@
 				BD3F6EAB198D6DD400DFECD9 /* UIFont+TODOFont.m */,
 				BD3F6EBD198D817000DFECD9 /* UIImageView+TODOBackgroundImage.h */,
 				BD3F6EBE198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m */,
+				BDAE164A198F9569008D7AF6 /* NSString+Additions.h */,
+				BDAE164B198F9569008D7AF6 /* NSString+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -401,6 +438,7 @@
 			files = (
 				BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */,
 				BD3F6EBC198D7DD600DFECD9 /* taskListBackgroundImage@2x.png in Resources */,
+				BD697E33198F7F6500D61717 /* TODOUserViewController.xib in Resources */,
 				BD3F6EBA198D7DD600DFECD9 /* ShoppingList_Icon@2x.png in Resources */,
 				BD3F6EB5198D7DD600DFECD9 /* HomeMenuIcon.png in Resources */,
 				BD3F6EA9198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib in Resources */,
@@ -430,16 +468,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2054F7198B955C0047DD07 /* TODOTaskListViewController.m in Sources */,
+				BDAE1650198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */,
+				BD697E2A198F7CDB00D61717 /* TODOAPI.m in Sources */,
 				BD3F6E9F198D655E00DFECD9 /* UIColor+TODOColors.m in Sources */,
-				BD205501198BA2AC0047DD07 /* User.m in Sources */,
+				BD697E27198F79BA00D61717 /* TODOURLConnection.m in Sources */,
+				BDAE1648198F8C5E008D7AF6 /* User.m in Sources */,
 				BD3F6EA8198D6BAF00DFECD9 /* TODOTaskManagerViewController.m in Sources */,
 				BD2054C6198A802D0047DD07 /* TODOStorageManager.m in Sources */,
+				BD697E32198F7F6500D61717 /* TODOUserViewController.m in Sources */,
 				BD2054FB198B9D560047DD07 /* Model.xcdatamodeld in Sources */,
 				BD3F6EA3198D670A00DFECD9 /* TODOContainerViewController.m in Sources */,
 				BD205504198BA3A50047DD07 /* Base.m in Sources */,
+				BDAE164C198F9569008D7AF6 /* NSString+Additions.m in Sources */,
 				BD2054EB198B88820047DD07 /* main.m in Sources */,
 				BD3F6EAC198D6DD400DFECD9 /* UIFont+TODOFont.m in Sources */,
 				BD3F6EBF198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m in Sources */,
+				BDAE163B198F8755008D7AF6 /* TODOUserManager.m in Sources */,
 				BD2054FE198BA2AB0047DD07 /* Task.m in Sources */,
 				BD2054D4198A80B30047DD07 /* TODOAppDelegate.m in Sources */,
 			);
@@ -450,11 +494,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD205509198BA7750047DD07 /* Task.m in Sources */,
+				BDAE164D198F9569008D7AF6 /* NSString+Additions.m in Sources */,
+				BDAE1649198F8C5E008D7AF6 /* User.m in Sources */,
 				BD205507198BA7750047DD07 /* Base.m in Sources */,
 				BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */,
 				BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */,
-				BD205508198BA7750047DD07 /* User.m in Sources */,
+				BDAE163C198F8755008D7AF6 /* TODOUserManager.m in Sources */,
 				BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */,
+				BDAE1651198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,9 +708,10 @@
 		BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BDAE163D198F8AB4008D7AF6 /* UserAPI.xcdatamodel */,
 				BD2054FA198B9D560047DD07 /* Model.xcdatamodel */,
 			);
-			currentVersion = BD2054FA198B9D560047DD07 /* Model.xcdatamodel */;
+			currentVersion = BDAE163D198F8AB4008D7AF6 /* UserAPI.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

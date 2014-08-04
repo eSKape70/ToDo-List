@@ -45,6 +45,9 @@
                             <state key="normal" image="SettingsMenuIcon.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="goToUserPressed:" destination="-1" eventType="touchUpInside" id="PqL-ke-eMB"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="B3r-yN-G4j">
                             <rect key="frame" x="0.0" y="48" width="320" height="2"/>

@@ -11,4 +11,8 @@
 
 #define TASK_CELL_IDENTIFIER @"taskCell"
 
+#define API_SECRET  @"api53db52d7749a0"
+#define APP_ID      @"ToDo70"
+#define REQUEST_TIMEOUT       30
+
 #endif

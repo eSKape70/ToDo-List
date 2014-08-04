@@ -2,7 +2,7 @@
 //  User.m
 //  ToDo
 //
-//  Created by Gemini - Alex on 01/08/14.
+//  Created by Gemini - Alex on 04/08/14.
 //  Copyright (c) 2014 Stan Alexandru. All rights reserved.
 //
 
@@ -11,8 +11,11 @@
 
 @implementation User
 
-@dynamic userID;
 @dynamic alias;
 @dynamic email;
+@dynamic userID;
+@dynamic access_token;
+@dynamic refresh_token;
+@dynamic code;
 
 @end

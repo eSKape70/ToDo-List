@@ -16,5 +16,6 @@
 
 -(IBAction)goToListPressed:(id)sender;
 -(IBAction)addTaskPressed:(id)sender;
+-(IBAction)goToUserPressed:(id)sender;
 
 @end

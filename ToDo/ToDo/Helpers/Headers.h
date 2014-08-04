@@ -11,6 +11,7 @@
 
 //storage
 #import "TODOStorageManager.h"
+#import "TODOUserManager.h"
 #import "Base.h"
 #import "User.h"
 #import "Task.h"
@@ -19,11 +20,18 @@
 #import "TODOTaskManagerViewController.h"
 #import "TODOContainerViewController.h"
 #import "TODOTaskListViewController.h"
+#import "TODOUserViewController.h"
 
 //Categories
 #import "UIColor+TODOColors.h"
 #import "UIFont+TODOFont.h"
 #import "UIImageView+TODOBackgroundImage.h"
+#import "NSString+Additions.h"
+
+//Connections
+#import "TODOAPI.h"
+#import "TODOURLConnection.h"
+#import "TODOURLResponse.h"
 
 //Others
 #import "Constants.h"
