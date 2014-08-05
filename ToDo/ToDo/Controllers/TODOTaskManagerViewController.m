@@ -10,6 +10,8 @@
 
 @interface TODOTaskManagerViewController ()
 
+@property(strong, nonatomic) Task* taskToEdit;
+
 @end
 
 @implementation TODOTaskManagerViewController
@@ -42,13 +44,17 @@
 }
 
 -(void)customiseView {
-  doneBtn.backgroundColor = [UIColor lightGrayColor];
-  cancelBtn.backgroundColor = [UIColor darkGrayColor];
+  doneBtn.backgroundColor = [UIColor semiTransparentDarkColor];
+  cancelBtn.backgroundColor = [UIColor semiTransparentLightColor];
   [doneBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
   [cancelBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
   screenTitle.font = [UIFont TODOFontWithSize:24];
 }
-
+-(void)editTask:(Task*)task {
+  _taskToEdit = task;
+  taskTitle.text = _taskToEdit.title;
+  taskDescription.text = _taskToEdit.note;
+}
 #pragma mark - Buttons Actions 
 
 -(IBAction)doneBtnPressed:(id)sender {
@@ -56,7 +62,20 @@
     return;
   }
   
-  [[TODOStorageManager singleton] addTaskWithTitle:taskTitle.text andDescription:taskDescription.text];
+  if (_taskToEdit) {
+    BOOL didChange = NO;
+    if (![_taskToEdit.title isEqualToString:taskTitle.text]) {
+      didChange = YES;
+    }
+    if (![_taskToEdit.note isEqualToString:taskDescription.text]) {
+      didChange = YES;
+    }
+    if (didChange) {
+      [[TODOStorageManager singleton] updateTask:_taskToEdit withTitle:taskTitle.text note:taskDescription.text completed:NO];
+    }
+  }
+  else
+    [[TODOStorageManager singleton] addTaskWithTitle:taskTitle.text andDescription:taskDescription.text];
   
   [self cancelBtnPressed:nil];
 }
@@ -79,5 +98,6 @@
 - (void)cleanView {
   taskTitle.text = @"";
   taskDescription.text = @"";
+  _taskToEdit = nil;
 }
 @end

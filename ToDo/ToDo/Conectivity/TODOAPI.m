@@ -75,8 +75,10 @@
                 onComplete:onComplete];
 }
 + (TODOURLConnection *)getTasksOnComplete:(URLResponseBlock)onComplete {
+  NSMutableDictionary *param = [NSMutableDictionary new];
+  [param setObject:@"note" forKey:@"fields"];
   return [self makeAPICall:@"/tasks/get.php"
-                    params:nil
+                    params:param
              requires_auth:YES
             request_method:@"POST"
                 onComplete:onComplete];

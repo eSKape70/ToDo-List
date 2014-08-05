@@ -12,10 +12,15 @@
   IBOutlet UIView *container;
 }
 
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
+
 + (TODOContainerViewController*)singleton;
 
 -(IBAction)goToListPressed:(id)sender;
 -(IBAction)addTaskPressed:(id)sender;
 -(IBAction)goToUserPressed:(id)sender;
+
+- (void)viewDidScrollVerticallyWithPercent:(CGFloat)percent;
+- (void)editTask:(Task*)task;
 
 @end

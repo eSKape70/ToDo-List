@@ -29,6 +29,4 @@
 @property (nonatomic, retain) NSNumber * toDelete;
 @property (nonatomic, retain) NSNumber * toUpdate;
 
--(NSString*)getStringFromTasks:(NSArray*)tasks;
-
 @end

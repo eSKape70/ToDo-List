@@ -9,7 +9,8 @@
 #ifndef ToDo_Constants_h
 #define ToDo_Constants_h
 
-#define TASK_CELL_IDENTIFIER @"taskCell"
+#define TASK_CELL_IDENTIFIER_SIMPLE @"taskCell"
+#define TASK_CELL_IDENTIFIER_NOTE @"taskCellNote"
 
 #define API_SECRET  @"api53db52d7749a0"
 #define APP_ID      @"ToDo70"

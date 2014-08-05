@@ -18,5 +18,6 @@
 
 -(IBAction)doneBtnPressed:(id)sender;
 -(IBAction)cancelBtnPressed:(id)sender;
+-(void)editTask:(Task*)task;
 
 @end

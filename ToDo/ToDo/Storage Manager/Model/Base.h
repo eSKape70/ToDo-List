@@ -40,5 +40,8 @@
  * Deletes this object and commits the managed object contenxt
  */
 - (void)remove;
-+ (NSArray*)getDictionariesFromObjects:(NSArray*)objects;
+/**
+ * Returns an array of dictionaries populated with task titles,notes,completed
+ */
++ (NSArray*)getDictionariesFromTasks:(NSArray*)objects;
 @end

@@ -11,9 +11,9 @@
 @implementation UIColor (TODOColors)
 
 +(UIColor*)semiTransparentLightColor {
-  return [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:0.5];
+  return [UIColor colorWithRed:50.0/255.0 green:50.0/255.0 blue:50.0/255.0 alpha:0.3];
 }
 +(UIColor*)semiTransparentDarkColor {
-  return [UIColor colorWithRed:104.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:0.5];
+  return [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:0.3];
 }
 @end

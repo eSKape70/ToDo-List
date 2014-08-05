@@ -51,6 +51,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)editTask:(Task*)task {
+  if (!taskManagerVC) {
+    taskManagerVC = [[TODOTaskManagerViewController alloc] initWithNibName:@"TODOTaskManagerViewController" bundle:nil];
+  }
+  [taskManagerVC editTask:task];
+  [self addTaskPressed:nil];
+}
 #pragma mark - App Navigation Logic
 
 - (void)swapCurrentControllerWith:(UIViewController*)viewController{
@@ -89,6 +96,7 @@
   if (!taskListVC) {
     taskListVC = [[TODOTaskListViewController alloc] initWithNibName:@"TODOTaskListViewController" bundle:nil];
   }
+  [_backgroundImage horizontallyAdjustLayerForPercent:0.0];
   [self swapCurrentControllerWith:taskListVC];
 }
 
@@ -96,6 +104,8 @@
   if (!taskManagerVC) {
     taskManagerVC = [[TODOTaskManagerViewController alloc] initWithNibName:@"TODOTaskManagerViewController" bundle:nil];
   }
+  [_backgroundImage horizontallyAdjustLayerForPercent:0.33];
+
   [self swapCurrentControllerWith:taskManagerVC];
 }
 
@@ -103,6 +113,12 @@
   if (!userVC) {
     userVC = [[TODOUserViewController alloc] initWithNibName:@"TODOUserViewController" bundle:nil];
   }
+  [_backgroundImage horizontallyAdjustLayerForPercent:0.66];
   [self swapCurrentControllerWith:userVC];
+}
+#pragma mark - Background Effect
+
+-(void)viewDidScrollVerticallyWithPercent:(CGFloat)percent {
+  [_backgroundImage verticallyAdjustLayerForPercent:percent];
 }
 @end

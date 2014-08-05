@@ -129,7 +129,7 @@
   if(completed)
     task.completed = [NSDate new];
   if (![task.toAdd boolValue]) {
-    task.toUpdate = [NSNumber numberWithBool:YES];
+    task.toUpdate = @(YES);
   }
   [task save];
   [self syncTasksOnComplete:nil];
@@ -140,9 +140,9 @@
     [self syncTasksOnComplete:nil];
     return;
   }
-  task.toDelete = [NSNumber numberWithBool:YES];
-  task.toAdd = [NSNumber numberWithBool:NO];
-  task.toAdd = [NSNumber numberWithBool:NO];
+  task.toDelete = @(YES);
+  task.toAdd = @(NO);
+  task.toUpdate = @(NO);
   [task save];
   [self syncTasksOnComplete:nil];
 }
@@ -150,11 +150,16 @@
   Task* task = [Task new];
   task.title = taskTitle;
   task.note = taskDescription;
-  task.toAdd = [NSNumber numberWithBool:YES];
+  task.toAdd = @(YES);
+  task.toDelete = @(NO);
+  task.toUpdate = @(NO);
   [task save];
   [self syncTasksOnComplete:nil];
 }
 - (void)syncTasksOnComplete:(void (^)(void))onComplete {
+  if (![[TODOUserManager singleton] isAuthenticated]) {
+    return;
+  }
   //delete all
   NSArray *tasksToDelete = [Task find:@{@"toDelete":@(YES)}];
   NSMutableArray *idsToDelete = [NSMutableArray new];
@@ -169,7 +174,7 @@
   [TODOAPI deleteTasks:toDelete onComplete:^(TODOURLResponse *response){
     if (response.successful) {
       //edit all
-      NSArray *tasksToUpdate = [Base getDictionariesFromObjects:[Task find:@{@"toUpdate":@(YES)}]];
+      NSArray *tasksToUpdate = [Base getDictionariesFromTasks:[Task find:@{@"toUpdate":@(YES)}]];
       NSMutableDictionary *toUpdate = nil;
       if ([tasksToUpdate count]) {
         toUpdate = [[NSMutableDictionary alloc] init];
@@ -178,7 +183,7 @@
       [TODOAPI updateTasks:toUpdate onComplete:^(TODOURLResponse *response){
         if (response.successful) {
           //add all
-          NSArray *tasksToAdd = [Base getDictionariesFromObjects:[Task find:@{@"toAdd":@(YES)}]];
+          NSArray *tasksToAdd = [Base getDictionariesFromTasks:[Task find:@{@"toAdd":@(YES)}]];
           NSMutableDictionary *toAdd = nil;
           if ([tasksToAdd count]) {
             toAdd = [[NSMutableDictionary alloc] init];
@@ -204,6 +209,9 @@
                     task.modified = [NSDate dateWithTimeIntervalSince1970:[[dict objectForKey:@"modified"] intValue]];
                     if([[dict objectForKey:@"completed"] intValue])
                       task.completed = [NSDate dateWithTimeIntervalSince1970:[[dict objectForKey:@"completed"] intValue]];
+                    task.toDelete = @(NO);
+                    task.toUpdate = @(NO);
+                    task.toAdd = @(NO);
                     [task save];
                   }
                   [[NSNotificationCenter defaultCenter] postNotificationName:DID_SYNC object:nil];

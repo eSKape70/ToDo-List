@@ -10,7 +10,7 @@
 
 @implementation UIImageView (TODOBackgroundImage)
 
--(void)adjustLayerForPercent:(CGFloat)percent {
+-(void)verticallyAdjustLayerForPercent:(CGFloat)percent {
   
   CALayer *picLayer = nil;
   for (CALayer *layer in [self.layer sublayers])
@@ -46,4 +46,47 @@
   [CATransaction commit];
 }
 
+-(void)horizontallyAdjustLayerForPercent:(CGFloat)percent {
+
+  CALayer *picLayer = nil;
+  for (CALayer *layer in [self.layer sublayers])
+    if ([[layer name] isEqualToString:@"animLayer"]){
+      picLayer = layer;
+      break;
+    }
+  
+  UIImage *image = self.image;
+  
+  CGSize imgSize = image.size;
+  
+  float xOffset = MIN(0,MAX(-(imgSize.width-self.frame.size.width)*percent, -imgSize.width+self.frame.size.width));
+  
+//  [CATransaction begin];
+//  [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+//  [CATransaction setAnimationDuration:5.0];
+  BOOL noLayer = !picLayer;
+  if(!picLayer){
+    picLayer = [CALayer layer];
+  }
+  if(noLayer){
+    picLayer.contents = (id)image.CGImage;
+  }
+  [UIView animateWithDuration:1.5 delay:0.0 options:UIViewAnimationOptionCurveLinear
+                   animations:^{
+                     picLayer.anchorPoint = CGPointMake(0.0f, 0.0f);
+                     picLayer.bounds      = CGRectMake(0, 0, imgSize.width, imgSize.height);
+                     picLayer.position    = CGPointMake(xOffset,picLayer.position.y);
+                     picLayer.name = @"animLayer";
+                   }
+                   completion:^(BOOL finished) {
+                     
+                   }
+   ];
+
+  
+  if(!picLayer.superlayer)
+    [self.layer addSublayer:picLayer];
+  
+//  [CATransaction commit];
+}
 @end

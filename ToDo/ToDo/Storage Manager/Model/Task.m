@@ -28,13 +28,4 @@
 @dynamic toUpdate;
 @dynamic modified;
 
--(NSString*)getStringFromTasks:(NSArray*)tasks {
-  NSMutableString *string = [NSMutableString new];
-//  for (Task *task in tasks) {
-//    
-//  }
-  return string;
-}
-
-
 @end

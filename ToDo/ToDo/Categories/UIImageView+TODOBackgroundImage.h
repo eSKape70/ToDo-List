@@ -10,6 +10,7 @@
 
 @interface UIImageView (TODOBackgroundImage)
 
--(void)adjustLayerForPercent:(CGFloat)percent;
+-(void)verticallyAdjustLayerForPercent:(CGFloat)percent;
+-(void)horizontallyAdjustLayerForPercent:(CGFloat)percent;
 
 @end

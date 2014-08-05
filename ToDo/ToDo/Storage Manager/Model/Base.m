@@ -165,11 +165,20 @@
     return [mutableFetchResults copy];
   }
 }
-+ (NSArray*)getDictionariesFromObjects:(NSArray*)objects {
++ (NSArray*)getDictionariesFromTasks:(NSArray*)objects {
   NSMutableArray *array = [NSMutableArray new];
   for (Task *task in objects) {
     NSMutableDictionary *dict = [NSMutableDictionary new];
     [dict setObject:task.title forKey:@"title"];
+    if (task.note) {
+      [dict setObject:task.note forKey:@"note"];
+    }
+    if (task.completed) {
+      [dict setObject:task.completed forKey:@"completed"];
+    }
+    if (task.taskID) {
+      [dict setObject:task.taskID forKey:@"id"];
+    }
     [array addObject:dict];
   }
   return [NSArray arrayWithArray:array];
