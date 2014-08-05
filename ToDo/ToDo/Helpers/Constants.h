@@ -18,4 +18,8 @@
 
 #define DID_SYNC @"didSyncNotification"
 
+#define EDIT_TASK @"Edit Task"
+#define ADD_TASK  @"Add Task"
+#define RELOG     @"Relog"
+#define LOGIN     @"Login"
 #endif

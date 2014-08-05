@@ -128,6 +128,9 @@
   task.note = note;
   if(completed)
     task.completed = [NSDate new];
+  else
+    task.completed = nil;
+  task.modified = [NSDate new];
   if (![task.toAdd boolValue]) {
     task.toUpdate = @(YES);
   }
@@ -150,6 +153,7 @@
   Task* task = [Task new];
   task.title = taskTitle;
   task.note = taskDescription;
+  task.modified = [NSDate new];
   task.toAdd = @(YES);
   task.toDelete = @(NO);
   task.toUpdate = @(NO);

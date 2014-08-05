@@ -26,18 +26,23 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [TODOUserManager singleton].user.access_token = nil;
-
   // Do any additional setup after loading the view from its nib.
-  //[self prepareView];
+}
+- (void)viewWillAppear:(BOOL)animated {
+  [self prepareView];
 }
 - (void)prepareView {
-//  if ([[TODOUserManager singleton] isAuthorized]) {
-//    _authorizeBtn.hidden = YES;
-//  }
-//  if ([[TODOUserManager singleton] isAuthenticated]) {
-//    _loginBtn.hidden = YES;
-//  }
+  BOOL isLoggedIn = [[TODOUserManager singleton] isAuthenticated];
+  [_loginBtn setTitle:(isLoggedIn?RELOG:LOGIN) forState:UIControlStateNormal];
+  _userEmail.hidden = !isLoggedIn;
+  _userAlias.hidden = !isLoggedIn;
+  _staticEmail.hidden = !isLoggedIn;
+  _staticAlias.hidden = !isLoggedIn;
+  
+  if (isLoggedIn) {
+    _userEmail.text = [TODOUserManager singleton].user.email;
+    _userAlias.text = [TODOUserManager singleton].user.alias;
+  }
 }
 - (void)didReceiveMemoryWarning
 {
@@ -46,11 +51,11 @@
 }
 
 #pragma mark - Actions
--(IBAction)authorizeBtnPressed:(id)sender {
+-(IBAction)loginBtnPressed:(id)sender {
   [self loadWebView];
   [self.view addSubview:_webViewContainer];
 }
--(IBAction)loginBtnPressed:(id)sender {
+-(void)getAccessToken {
   NSMutableDictionary *params = [NSMutableDictionary new];
   [TODOAPI getAccessToken:params onComplete:^(TODOURLResponse *response) {
     if (response.successful) {
@@ -58,9 +63,23 @@
       [TODOUserManager singleton].user.access_token = [userData objectForKey:@"access_token"];
       [TODOUserManager singleton].user.refresh_token = [userData objectForKey:@"refresh_token"];
       [[TODOUserManager singleton].user save];
-    } else
+      [TODOAPI getUserInfoOnComplete:^(TODOURLResponse *response) {
+        if (response.successful) {
+          NSDictionary *userData = [response getDataAsNSArray][0];
+          [TODOUserManager singleton].user.alias = [userData objectForKey:@"alias"];
+          [TODOUserManager singleton].user.email = [userData objectForKey:@"email"];
+          [[TODOUserManager singleton].user save];
+          [[TODOStorageManager singleton] syncTasksOnComplete:nil];
+          [self prepareView];
+        }
+        else {
+          NSLog(@"could not get user info");
+          [self prepareView];
+        }
+      }];
+    } else {
       NSLog(@"could not login");
-    [self prepareView];
+    }
   }];
 }
 -(IBAction)closeWebViewPressed:(id)sender {
@@ -96,6 +115,7 @@
         [TODOUserManager singleton].user.code = [NSString stringWithString:[request.URL.absoluteString substringWithRange:NSMakeRange(match.range.location+5, match.range.length-6)]];
         [TODOUserManager singleton].user.access_token = nil;
         [[TODOUserManager singleton].user save];
+        [self getAccessToken];
         [self closeWebViewPressed:nil];
       }
       return NO;

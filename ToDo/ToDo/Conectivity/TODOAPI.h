@@ -18,6 +18,8 @@
 
 //get access token and refresh token
 + (TODOURLConnection *)getAccessToken:(NSDictionary*)params onComplete:(URLResponseBlock)onComplete;
+//get access token and refresh token
++ (TODOURLConnection *)getUserInfoOnComplete:(URLResponseBlock)onComplete;
 //add an array of tasks
 + (TODOURLConnection *)addTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete;
 //add an array of tasks

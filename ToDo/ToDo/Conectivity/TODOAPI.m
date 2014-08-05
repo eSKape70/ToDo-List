@@ -26,6 +26,13 @@
             request_method:@"POST"
                 onComplete:onComplete];
 }
++ (TODOURLConnection *)getUserInfoOnComplete:(URLResponseBlock)onComplete {
+  return [self makeAPICall:@"/account/get.php"
+                    params:nil
+             requires_auth:YES
+            request_method:@"POST"
+                onComplete:onComplete];
+}
 + (TODOURLConnection *)addTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete {
   if (!tasks) {
     TODOURLResponse *response = [TODOURLResponse new];

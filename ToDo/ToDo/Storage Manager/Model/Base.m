@@ -174,7 +174,11 @@
       [dict setObject:task.note forKey:@"note"];
     }
     if (task.completed) {
-      [dict setObject:task.completed forKey:@"completed"];
+      [dict setObject:@([task.completed timeIntervalSince1970]) forKey:@"completed"];
+    } else
+      [dict setObject:@(0) forKey:@"completed"];
+    if (task.modified) {
+      [dict setObject:@([task.modified timeIntervalSince1970]) forKey:@"modified"];
     }
     if (task.taskID) {
       [dict setObject:task.taskID forKey:@"id"];

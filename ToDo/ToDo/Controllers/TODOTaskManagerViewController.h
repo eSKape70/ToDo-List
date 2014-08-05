@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TODOTaskManagerViewController : UIViewController {
+@interface TODOTaskManagerViewController : UIViewController <UITextFieldDelegate>{
   IBOutlet UILabel *screenTitle;
   IBOutlet UITextField *taskTitle;
   IBOutlet UITextField *taskDescription;
   IBOutlet UIButton *doneBtn;
   IBOutlet UIButton *cancelBtn;
+  IBOutlet UISwitch *completedSwitch;
+  IBOutlet UILabel *lastModifiedLabel;
+  IBOutlet UILabel *staticLastModified;
+  IBOutlet UILabel *staticCompleted;
 }
 
 -(IBAction)doneBtnPressed:(id)sender;

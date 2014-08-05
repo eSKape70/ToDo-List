@@ -31,6 +31,13 @@
     // Do any additional setup after loading the view from its nib.
   [self customiseView];
 }
+- (void)viewWillAppear:(BOOL)animated {
+  if (_taskToEdit) {
+    [self editTask:_taskToEdit];
+  } else {
+    [self cleanView];
+  }
+}
 - (void)viewWillDisappear:(BOOL)animated {
   [self hideKeyboard];
 }
@@ -46,14 +53,29 @@
 -(void)customiseView {
   doneBtn.backgroundColor = [UIColor semiTransparentDarkColor];
   cancelBtn.backgroundColor = [UIColor semiTransparentLightColor];
-  [doneBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
-  [cancelBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
+//  [doneBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
+//  [cancelBtn.titleLabel setFont:[UIFont TODOFontWithSize:18]];
   screenTitle.font = [UIFont TODOFontWithSize:24];
 }
 -(void)editTask:(Task*)task {
   _taskToEdit = task;
+
+  screenTitle.text = EDIT_TASK;
   taskTitle.text = _taskToEdit.title;
   taskDescription.text = _taskToEdit.note;
+  staticLastModified.hidden = NO;
+  staticCompleted.hidden = NO;
+  completedSwitch.hidden = NO;
+  
+  NSDateFormatter *df = [[NSDateFormatter alloc] init];
+  [df setDateFormat:@"MM-dd HH:mm"];
+  [df setLocale:[NSLocale currentLocale]];
+  lastModifiedLabel.text = [df stringFromDate:_taskToEdit.modified];
+  completedSwitch.on = NO;
+  if (_taskToEdit.completed) {
+    completedSwitch.on = YES;
+  }
+    
 }
 #pragma mark - Buttons Actions 
 
@@ -70,8 +92,11 @@
     if (![_taskToEdit.note isEqualToString:taskDescription.text]) {
       didChange = YES;
     }
+    if ((completedSwitch.on && !_taskToEdit.completed) || (!completedSwitch.on && _taskToEdit.completed)) {
+      didChange = YES;
+    }
     if (didChange) {
-      [[TODOStorageManager singleton] updateTask:_taskToEdit withTitle:taskTitle.text note:taskDescription.text completed:NO];
+      [[TODOStorageManager singleton] updateTask:_taskToEdit withTitle:taskTitle.text note:taskDescription.text completed:completedSwitch.on];
     }
   }
   else
@@ -82,6 +107,12 @@
 -(IBAction)cancelBtnPressed:(id)sender {
   [[TODOContainerViewController singleton] goToListPressed:nil];
 }
+#pragma mark - TextField Delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
 #pragma mark - Helpers
 
 - (BOOL)checkData {
@@ -96,8 +127,14 @@
   [taskDescription resignFirstResponder];
 }
 - (void)cleanView {
+  screenTitle.text = ADD_TASK;
   taskTitle.text = @"";
   taskDescription.text = @"";
+  completedSwitch.on = NO;
+  staticLastModified.hidden = YES;
+  lastModifiedLabel.text = @"";
   _taskToEdit = nil;
+  staticCompleted.hidden = YES;
+  completedSwitch.hidden = YES;
 }
 @end

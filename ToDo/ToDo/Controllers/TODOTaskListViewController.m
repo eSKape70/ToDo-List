@@ -37,6 +37,7 @@
   [self reloadAllData];
 }
 - (void)viewWillAppear:(BOOL)animated {
+  [self reloadAllData];
   _shouldSendPercent = YES;
 }
 - (void)viewWillDisappear:(BOOL)animated {
