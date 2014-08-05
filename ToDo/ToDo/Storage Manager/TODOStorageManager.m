@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Stan Alexandru. All rights reserved.
 //
 
-#import "TODOStorageManager.h"
+#import "Headers.h"
 
 @implementation TODOStorageManager
 
@@ -25,7 +25,6 @@
   });
   return shared;
 }
-#pragma mark - User
 
 #pragma mark - Persistance
 
@@ -122,4 +121,105 @@
   return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - Task Manager
+
+- (void)updateTask:(Task*)task withTitle:(NSString*)title note:(NSString*)note completed:(BOOL)completed {
+  task.title = title;
+  task.note = note;
+  if(completed)
+    task.completed = [NSDate new];
+  if (![task.toAdd boolValue]) {
+    task.toUpdate = [NSNumber numberWithBool:YES];
+  }
+  [task save];
+  [self syncTasksOnComplete:nil];
+}
+- (void)deleteTask:(Task*)task {
+  if (!task.taskID || ![task.taskID length]) {
+    [task remove];
+    [self syncTasksOnComplete:nil];
+    return;
+  }
+  task.toDelete = [NSNumber numberWithBool:YES];
+  task.toAdd = [NSNumber numberWithBool:NO];
+  task.toAdd = [NSNumber numberWithBool:NO];
+  [task save];
+  [self syncTasksOnComplete:nil];
+}
+- (void)addTaskWithTitle:(NSString*)taskTitle andDescription:(NSString*)taskDescription {
+  Task* task = [Task new];
+  task.title = taskTitle;
+  task.note = taskDescription;
+  task.toAdd = [NSNumber numberWithBool:YES];
+  [task save];
+  [self syncTasksOnComplete:nil];
+}
+- (void)syncTasksOnComplete:(void (^)(void))onComplete {
+  //delete all
+  NSArray *tasksToDelete = [Task find:@{@"toDelete":@(YES)}];
+  NSMutableArray *idsToDelete = [NSMutableArray new];
+  for (Task *task in tasksToDelete) {
+    [idsToDelete addObject:task.taskID];
+  }
+  NSMutableDictionary *toDelete = nil;
+  if ([idsToDelete count]) {
+    toDelete = [[NSMutableDictionary alloc] init];
+    [toDelete setObject:idsToDelete forKey:@"tasks="];
+  }
+  [TODOAPI deleteTasks:toDelete onComplete:^(TODOURLResponse *response){
+    if (response.successful) {
+      //edit all
+      NSArray *tasksToUpdate = [Base getDictionariesFromObjects:[Task find:@{@"toUpdate":@(YES)}]];
+      NSMutableDictionary *toUpdate = nil;
+      if ([tasksToUpdate count]) {
+        toUpdate = [[NSMutableDictionary alloc] init];
+        [toUpdate setObject:tasksToUpdate forKey:@"tasks="];
+      }
+      [TODOAPI updateTasks:toUpdate onComplete:^(TODOURLResponse *response){
+        if (response.successful) {
+          //add all
+          NSArray *tasksToAdd = [Base getDictionariesFromObjects:[Task find:@{@"toAdd":@(YES)}]];
+          NSMutableDictionary *toAdd = nil;
+          if ([tasksToAdd count]) {
+            toAdd = [[NSMutableDictionary alloc] init];
+            [toAdd setObject:tasksToAdd forKey:@"tasks="];
+          }
+          [TODOAPI addTasks:toAdd onComplete:^(TODOURLResponse *response){
+            if (response.successful) {
+              //get synced list from server
+              [TODOAPI getTasksOnComplete:^(TODOURLResponse *response){
+                if (response.successful) {
+                  for (Task *task in [Task all]) {
+                    [task remove];
+                  }
+                  NSArray *tasksAdded = [response getDataAsNSArray];
+                  for (NSDictionary *dict in tasksAdded) {
+                    if ([[dict allKeys] count]<4) {
+                      continue;
+                    }
+                    Task *task = [Task new];
+                    task.title = [dict objectForKey:@"title"];
+                    task.note = [dict objectForKey:@"note"];
+                    task.taskID = [[dict objectForKey:@"id"] stringValue];
+                    task.modified = [NSDate dateWithTimeIntervalSince1970:[[dict objectForKey:@"modified"] intValue]];
+                    if([[dict objectForKey:@"completed"] intValue])
+                      task.completed = [NSDate dateWithTimeIntervalSince1970:[[dict objectForKey:@"completed"] intValue]];
+                    [task save];
+                  }
+                  [[NSNotificationCenter defaultCenter] postNotificationName:DID_SYNC object:nil];
+                } else
+                  NSLog(@"could not get tasks");
+              }];
+            } else
+              NSLog(@"could not add tasks");
+          }];
+        } else
+          NSLog(@"could not update tasks");
+      }];
+    } else
+      NSLog(@"could not delete tasks");
+  }];
+
+    //get all
+}
 @end

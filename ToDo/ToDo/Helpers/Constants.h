@@ -15,4 +15,6 @@
 #define APP_ID      @"ToDo70"
 #define REQUEST_TIMEOUT       30
 
+#define DID_SYNC @"didSyncNotification"
+
 #endif

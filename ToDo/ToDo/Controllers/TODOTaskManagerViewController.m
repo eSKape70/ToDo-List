@@ -54,11 +54,9 @@
 -(IBAction)doneBtnPressed:(id)sender {
   if (![self checkData]) {
     return;
-  }  
-  Task* newTask = [Task new];
-  newTask.title = taskTitle.text;
-  newTask.note = taskDescription.text;
-  [newTask save];
+  }
+  
+  [[TODOStorageManager singleton] addTaskWithTitle:taskTitle.text andDescription:taskDescription.text];
   
   [self cancelBtnPressed:nil];
 }

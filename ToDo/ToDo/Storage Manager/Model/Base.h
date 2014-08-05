@@ -40,5 +40,5 @@
  * Deletes this object and commits the managed object contenxt
  */
 - (void)remove;
-
++ (NSArray*)getDictionariesFromObjects:(NSArray*)objects;
 @end

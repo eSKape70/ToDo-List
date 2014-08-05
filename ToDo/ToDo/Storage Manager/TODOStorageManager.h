@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Headers.h"
+@class Task;
 
 @interface TODOStorageManager : NSObject
 
@@ -19,4 +19,9 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (void)updateTask:(Task*)task withTitle:(NSString*)title note:(NSString*)note completed:(BOOL)completed;
+- (void)deleteTask:(Task*)task;
+- (void)addTaskWithTitle:(NSString*)taskTitle andDescription:(NSString*)taskDescription;
+
+- (void)syncTasksOnComplete:(void (^)(void))onComplete;
 @end

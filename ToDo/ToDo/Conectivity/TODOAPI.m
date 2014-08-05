@@ -26,16 +26,66 @@
             request_method:@"POST"
                 onComplete:onComplete];
 }
-
++ (TODOURLConnection *)addTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete {
+  if (!tasks) {
+    TODOURLResponse *response = [TODOURLResponse new];
+    response.successful = YES;
+    if (onComplete)
+    {
+      onComplete(response);
+    }
+    return nil;
+  }
+  return [self makeAPICall:@"/tasks/add.php"
+                    params:tasks
+             requires_auth:YES
+            request_method:@"JSON"
+                onComplete:onComplete];
+}
++ (TODOURLConnection *)deleteTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete {
+  if (!tasks) {
+    TODOURLResponse *response = [TODOURLResponse new];
+    response.successful = YES;
+    if (onComplete)
+    {
+      onComplete(response);
+    }
+    return nil;
+  }
+  return [self makeAPICall:@"/tasks/delete.php"
+                    params:tasks
+             requires_auth:YES
+            request_method:@"JSON"
+                onComplete:onComplete];
+}
++ (TODOURLConnection *)updateTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete {
+  if (!tasks) {
+    TODOURLResponse *response = [TODOURLResponse new];
+    response.successful = YES;
+    if (onComplete)
+    {
+      onComplete(response);
+    }
+    return nil;
+  }
+  return [self makeAPICall:@"/tasks/edit.php"
+                    params:tasks
+             requires_auth:YES
+            request_method:@"JSON"
+                onComplete:onComplete];
+}
++ (TODOURLConnection *)getTasksOnComplete:(URLResponseBlock)onComplete {
+  return [self makeAPICall:@"/tasks/get.php"
+                    params:nil
+             requires_auth:YES
+            request_method:@"POST"
+                onComplete:onComplete];
+}
 + (TODOURLConnection *)makeAPICall:(NSString *)api_method onComplete:(URLResponseBlock)onComplete {
   return [self makeAPICall:api_method params:nil requires_auth:NO request_method:nil onComplete:onComplete];
 }
 + (TODOURLConnection *)makeAPICall:(NSString *)api_method params:(id)params requires_auth:(BOOL)requires_auth request_method:(NSString *)request_method onComplete:(URLResponseBlock)onComplete{
   
-  if (requires_auth && [[TODOUserManager singleton] isAuthenticated]) {
-    NSString *token = [TODOUserManager singleton].user.access_token;
-    [params addObject:token];
-  }
   if (requires_auth && ![[TODOUserManager singleton] isAuthenticated] && [[TODOUserManager singleton] isAuthorized]) {
     [params setObject:[TODOUserManager singleton].user.code forKey:@"code"];
     [params setObject:@"authorization_code" forKey:@"grant_type"];

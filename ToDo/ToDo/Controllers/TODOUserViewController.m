@@ -26,16 +26,18 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  [TODOUserManager singleton].user.access_token = nil;
+
   // Do any additional setup after loading the view from its nib.
   //[self prepareView];
 }
 - (void)prepareView {
-  if ([[TODOUserManager singleton] isAuthorized]) {
-    _authorizeBtn.hidden = YES;
-  }
-  if ([[TODOUserManager singleton] isAuthenticated]) {
-    _loginBtn.hidden = YES;
-  }
+//  if ([[TODOUserManager singleton] isAuthorized]) {
+//    _authorizeBtn.hidden = YES;
+//  }
+//  if ([[TODOUserManager singleton] isAuthenticated]) {
+//    _loginBtn.hidden = YES;
+//  }
 }
 - (void)didReceiveMemoryWarning
 {
@@ -92,6 +94,7 @@
         NSTextCheckingResult *match = [regularExpressionMatches firstObject];
         
         [TODOUserManager singleton].user.code = [NSString stringWithString:[request.URL.absoluteString substringWithRange:NSMakeRange(match.range.location+5, match.range.length-6)]];
+        [TODOUserManager singleton].user.access_token = nil;
         [[TODOUserManager singleton].user save];
         [self closeWebViewPressed:nil];
       }
@@ -121,7 +124,7 @@
   /**
    *  Set up our request and include the state.
    */
-  NSURL *requestUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.toodledo.com/3/account/authorize.php?response_type=code&client_id=%@&state=%@&scope=basic%%20tasks", APP_ID, [TODOUserManager singleton].state]];
+  NSURL *requestUrl = [NSURL URLWithString:[NSString stringWithFormat:@"https://api.toodledo.com/3/account/authorize.php?response_type=code&client_id=%@&state=%@&scope=basic%%20tasks%%20write", APP_ID, [TODOUserManager singleton].state]];
   
   NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
   [self.webView loadRequest:request];

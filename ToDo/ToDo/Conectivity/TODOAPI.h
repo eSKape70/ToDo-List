@@ -18,7 +18,14 @@
 
 //get access token and refresh token
 + (TODOURLConnection *)getAccessToken:(NSDictionary*)params onComplete:(URLResponseBlock)onComplete;
-
+//add an array of tasks
++ (TODOURLConnection *)addTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete;
+//add an array of tasks
++ (TODOURLConnection *)deleteTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete;
+//add an array of tasks
++ (TODOURLConnection *)updateTasks:(NSDictionary*)tasks onComplete:(URLResponseBlock)onComplete;
+//add an array of tasks
++ (TODOURLConnection *)getTasksOnComplete:(URLResponseBlock)onComplete;
 //manage network activity
 + (void)setNetworkActivityIndicatorVisible:(BOOL)setVisible;
 @end

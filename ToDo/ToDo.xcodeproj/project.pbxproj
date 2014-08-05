@@ -23,10 +23,8 @@
 		BD2054F7198B955C0047DD07 /* TODOTaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F5198B955C0047DD07 /* TODOTaskListViewController.m */; };
 		BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */; };
 		BD2054FB198B9D560047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
-		BD2054FE198BA2AB0047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
 		BD205504198BA3A50047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
 		BD205507198BA7750047DD07 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BD205503198BA3A50047DD07 /* Base.m */; };
-		BD205509198BA7750047DD07 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054FD198BA2AB0047DD07 /* Task.m */; };
 		BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054C5198A802D0047DD07 /* TODOStorageManager.m */; };
 		BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD20550D198BAE3D0047DD07 /* UserTests.m */; };
 		BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
@@ -57,6 +55,8 @@
 		BDAE164D198F9569008D7AF6 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164B198F9569008D7AF6 /* NSString+Additions.m */; };
 		BDAE1650198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */; };
 		BDAE1651198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */; };
+		BDAE165D198FBCCA008D7AF6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE165C198FBCCA008D7AF6 /* Task.m */; };
+		BDAE165E198FBCCA008D7AF6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAE165C198FBCCA008D7AF6 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,6 @@
 		BD2054F5198B955C0047DD07 /* TODOTaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOTaskListViewController.m; sourceTree = "<group>"; };
 		BD2054F6198B955C0047DD07 /* TODOTaskListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TODOTaskListViewController.xib; sourceTree = "<group>"; };
 		BD2054FA198B9D560047DD07 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		BD2054FC198BA2AB0047DD07 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		BD2054FD198BA2AB0047DD07 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		BD205502198BA3A50047DD07 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		BD205503198BA3A50047DD07 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
 		BD20550D198BAE3D0047DD07 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
@@ -134,6 +132,9 @@
 		BDAE164B198F9569008D7AF6 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		BDAE164E198F9ACA008D7AF6 /* TODOURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOURLResponse.h; sourceTree = "<group>"; };
 		BDAE164F198F9ACA008D7AF6 /* TODOURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOURLResponse.m; sourceTree = "<group>"; };
+		BDAE1652198FBB99008D7AF6 /* TaskSync.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskSync.xcdatamodel; sourceTree = "<group>"; };
+		BDAE165B198FBCCA008D7AF6 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		BDAE165C198FBCCA008D7AF6 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,12 +244,12 @@
 			isa = PBXGroup;
 			children = (
 				BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */,
+				BDAE165B198FBCCA008D7AF6 /* Task.h */,
+				BDAE165C198FBCCA008D7AF6 /* Task.m */,
 				BDAE1646198F8C5E008D7AF6 /* User.h */,
 				BDAE1647198F8C5E008D7AF6 /* User.m */,
 				BD205502198BA3A50047DD07 /* Base.h */,
 				BD205503198BA3A50047DD07 /* Base.m */,
-				BD2054FC198BA2AB0047DD07 /* Task.h */,
-				BD2054FD198BA2AB0047DD07 /* Task.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2054F7198B955C0047DD07 /* TODOTaskListViewController.m in Sources */,
+				BDAE165D198FBCCA008D7AF6 /* Task.m in Sources */,
 				BDAE1650198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */,
 				BD697E2A198F7CDB00D61717 /* TODOAPI.m in Sources */,
 				BD3F6E9F198D655E00DFECD9 /* UIColor+TODOColors.m in Sources */,
@@ -484,7 +486,6 @@
 				BD3F6EAC198D6DD400DFECD9 /* UIFont+TODOFont.m in Sources */,
 				BD3F6EBF198D817000DFECD9 /* UIImageView+TODOBackgroundImage.m in Sources */,
 				BDAE163B198F8755008D7AF6 /* TODOUserManager.m in Sources */,
-				BD2054FE198BA2AB0047DD07 /* Task.m in Sources */,
 				BD2054D4198A80B30047DD07 /* TODOAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +494,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD205509198BA7750047DD07 /* Task.m in Sources */,
 				BDAE164D198F9569008D7AF6 /* NSString+Additions.m in Sources */,
 				BDAE1649198F8C5E008D7AF6 /* User.m in Sources */,
 				BD205507198BA7750047DD07 /* Base.m in Sources */,
@@ -501,6 +501,7 @@
 				BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */,
 				BDAE163C198F8755008D7AF6 /* TODOUserManager.m in Sources */,
 				BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */,
+				BDAE165E198FBCCA008D7AF6 /* Task.m in Sources */,
 				BDAE1651198F9ACA008D7AF6 /* TODOURLResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,10 +709,11 @@
 		BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BDAE1652198FBB99008D7AF6 /* TaskSync.xcdatamodel */,
 				BDAE163D198F8AB4008D7AF6 /* UserAPI.xcdatamodel */,
 				BD2054FA198B9D560047DD07 /* Model.xcdatamodel */,
 			);
-			currentVersion = BDAE163D198F8AB4008D7AF6 /* UserAPI.xcdatamodel */;
+			currentVersion = BDAE1652198FBB99008D7AF6 /* TaskSync.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

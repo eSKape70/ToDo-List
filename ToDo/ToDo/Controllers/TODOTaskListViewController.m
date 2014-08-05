@@ -33,9 +33,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadAllData) name:DID_SYNC object:nil];
 }
 - (void)viewWillAppear:(BOOL)animated {
-  [self reloadAllData];
+  [[TODOStorageManager singleton] syncTasksOnComplete:nil];
 }
 - (void)didReceiveMemoryWarning
 {

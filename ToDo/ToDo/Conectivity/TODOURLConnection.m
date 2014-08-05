@@ -216,16 +216,50 @@
   // Set post information
   if ([request_method isEqualToString:@"POST"]) {
     // Set request and content type
-    NSString *authStr = [NSString stringWithFormat:@"%@:%@", APP_ID, API_SECRET];
-    NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
-    NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength]];
-    [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    if (![[TODOUserManager singleton] isAuthenticated]) {
+      NSString *authStr = [NSString stringWithFormat:@"%@:%@", APP_ID, API_SECRET];
+      NSData *authData = [authStr dataUsingEncoding:NSASCIIStringEncoding];
+      NSString *authValue = [NSString stringWithFormat:@"Basic %@", [authData base64EncodedStringWithOptions:NSDataBase64Encoding76CharacterLineLength]];
+      [request setValue:authValue forHTTPHeaderField:@"Authorization"];
+    } else {
+      if (!params)
+        params = [NSMutableDictionary new];
+      NSString *token = [TODOUserManager singleton].user.access_token;
+      [params setObject:token forKey:@"access_token"];
+    }
+
     
     // Build body from query string
     NSData *body = [[TODOURLConnection buildQueryString:params] dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:body];
     
     url = base_url;
+  } else if ([request_method isEqualToString:@"JSON"]) {
+    request_method = @"POST";
+    
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+    
+    //      NSMutableDictionary *fDict = [NSMutableDictionary dictionaryWithObject:params forKey:@"data"];
+
+    NSData *body =  [NSJSONSerialization dataWithJSONObject:[[params allValues] objectAtIndex:0]//fDict
+                                                    options:0
+                                                      error:nil];
+    NSString *itemsStr = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+    
+    NSString *encodedString = [itemsStr URLEncodedString];
+////    /b290c6e04ac3c5ed7cab5315daf26e2fe2c36459
+//    encodedString = @"%5B%7B%22title%22%3A%22task+1+%5Cu00e9%22%7D%2C%7B%22title%22%3A%22task+2+%5Cu5b57%22%7D%2C%7B%22title%22%3A%22task+3+%5C%22%22%7D%5D";
+    NSString *finalStr = [NSString stringWithFormat:@"access_token=%@&tasks=%@",[TODOUserManager singleton].user.access_token,encodedString];
+    body = [finalStr dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //      NSLog(@"for %@ Body data is %@",base_url,[[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding]);
+    
+    [request setValue:[NSString stringWithFormat:@"%lu",(unsigned long)[body length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:body];
+    
+    url = base_url;
+    
   } else if (params && [params isKindOfClass:[NSDictionary class]]) {
     url = [TODOURLConnection appendParametersToURL:base_url params:params];
   } else {
@@ -304,6 +338,9 @@
       {
         _onComplete(_response);
       }
+    } else {
+      NSString *resp = [[NSString alloc] initWithData:_response.rawData encoding:NSUTF8StringEncoding];
+      NSLog(@"%@",resp);
     }
     // Close all remaining connection elements
     [self close];

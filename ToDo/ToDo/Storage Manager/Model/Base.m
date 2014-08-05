@@ -165,4 +165,13 @@
     return [mutableFetchResults copy];
   }
 }
++ (NSArray*)getDictionariesFromObjects:(NSArray*)objects {
+  NSMutableArray *array = [NSMutableArray new];
+  for (Task *task in objects) {
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    [dict setObject:task.title forKey:@"title"];
+    [array addObject:dict];
+  }
+  return [NSArray arrayWithArray:array];
+}
 @end
