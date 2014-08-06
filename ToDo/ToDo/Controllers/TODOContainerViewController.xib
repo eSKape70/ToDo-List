@@ -72,13 +72,13 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
         <image name="HomeMenuIcon.png" width="15" height="13"/>
         <image name="SettingsMenuIcon.png" width="14" height="14"/>
         <image name="ShoppingList_Icon.png" width="12" height="12"/>
-        <image name="green-background.png" width="1440" height="900"/>
+        <image name="green-background.png" width="1280" height="800"/>
     </resources>
 </document>

@@ -178,6 +178,10 @@
   [TODOAPI deleteTasks:toDelete onComplete:^(TODOURLResponse *response){
     if (response.successful) {
       //edit all
+      for (Task *task in tasksToDelete) {
+        task.toDelete = nil;
+        [task save];
+      }
       NSArray *tasksToUpdate = [Base getDictionariesFromTasks:[Task find:@{@"toUpdate":@(YES)}]];
       NSMutableDictionary *toUpdate = nil;
       if ([tasksToUpdate count]) {
@@ -187,6 +191,11 @@
       [TODOAPI updateTasks:toUpdate onComplete:^(TODOURLResponse *response){
         if (response.successful) {
           //add all
+          NSArray *tasksToClean = [Task find:@{@"toUpdate":@(YES)}];
+          for (Task *task in tasksToClean) {
+            task.toUpdate = nil;
+            [task save];
+          }
           NSArray *tasksToAdd = [Base getDictionariesFromTasks:[Task find:@{@"toAdd":@(YES)}]];
           NSMutableDictionary *toAdd = nil;
           if ([tasksToAdd count]) {
@@ -195,6 +204,11 @@
           }
           [TODOAPI addTasks:toAdd onComplete:^(TODOURLResponse *response){
             if (response.successful) {
+              NSArray *tasksToClean = [Task find:@{@"toAdd":@(YES)}];
+              for (Task *task in tasksToClean) {
+                task.toAdd = nil;
+                [task save];
+              }
               //get synced list from server
               [TODOAPI getTasksOnComplete:^(TODOURLResponse *response){
                 if (response.successful) {

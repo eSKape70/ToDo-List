@@ -30,6 +30,11 @@
 		BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
 		BD30D1951990E00D00A3F038 /* green-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1931990E00D00A3F038 /* green-background.png */; };
 		BD30D1961990E00D00A3F038 /* green-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1941990E00D00A3F038 /* green-background@2x.png */; };
+		BD30D19D1992181A00A3F038 /* TODOContainerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD30D19C1992181A00A3F038 /* TODOContainerViewControllerTests.m */; };
+		BD30D1A81992274D00A3F038 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1A51992274D00A3F038 /* Default.png */; };
+		BD30D1A91992274D00A3F038 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1A61992274D00A3F038 /* Default@2x.png */; };
+		BD30D1AA1992274D00A3F038 /* Default–568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1A71992274D00A3F038 /* Default–568h@2x.png */; };
+		BD30D1AC199227B300A3F038 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1AB199227B300A3F038 /* Icon.png */; };
 		BD3F6E9F198D655E00DFECD9 /* UIColor+TODOColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6E9E198D655E00DFECD9 /* UIColor+TODOColors.m */; };
 		BD3F6EA3198D670A00DFECD9 /* TODOContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3F6EA1198D670A00DFECD9 /* TODOContainerViewController.m */; };
 		BD3F6EA4198D670A00DFECD9 /* TODOContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD3F6EA2198D670A00DFECD9 /* TODOContainerViewController.xib */; };
@@ -100,6 +105,11 @@
 		BD20550D198BAE3D0047DD07 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		BD30D1931990E00D00A3F038 /* green-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-background.png"; sourceTree = "<group>"; };
 		BD30D1941990E00D00A3F038 /* green-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-background@2x.png"; sourceTree = "<group>"; };
+		BD30D19C1992181A00A3F038 /* TODOContainerViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOContainerViewControllerTests.m; sourceTree = "<group>"; };
+		BD30D1A51992274D00A3F038 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BD30D1A61992274D00A3F038 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BD30D1A71992274D00A3F038 /* Default–568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default–568h@2x.png"; sourceTree = "<group>"; };
+		BD30D1AB199227B300A3F038 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BD3F6E9D198D655E00DFECD9 /* UIColor+TODOColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TODOColors.h"; sourceTree = "<group>"; };
 		BD3F6E9E198D655E00DFECD9 /* UIColor+TODOColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TODOColors.m"; sourceTree = "<group>"; };
 		BD3F6EA0198D670A00DFECD9 /* TODOContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TODOContainerViewController.h; sourceTree = "<group>"; };
@@ -218,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				BD20550D198BAE3D0047DD07 /* UserTests.m */,
+				BD30D19C1992181A00A3F038 /* TODOContainerViewControllerTests.m */,
 				BD2054AF198A7D8E0047DD07 /* Supporting Files */,
 			);
 			path = ToDoTests;
@@ -270,6 +281,7 @@
 		BD2054CF198A80B30047DD07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BD30D1A41992274D00A3F038 /* App Launch and Icon */,
 				BD30D1931990E00D00A3F038 /* green-background.png */,
 				BD30D1941990E00D00A3F038 /* green-background@2x.png */,
 				BD3F6EAD198D7DD600DFECD9 /* HomeMenuIcon.png */,
@@ -350,6 +362,17 @@
 				BD2054F3198B94020047DD07 /* Constants.h */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD30D1A41992274D00A3F038 /* App Launch and Icon */ = {
+			isa = PBXGroup;
+			children = (
+				BD30D1AB199227B300A3F038 /* Icon.png */,
+				BD30D1A51992274D00A3F038 /* Default.png */,
+				BD30D1A61992274D00A3F038 /* Default@2x.png */,
+				BD30D1A71992274D00A3F038 /* Default–568h@2x.png */,
+			);
+			path = "App Launch and Icon";
 			sourceTree = "<group>";
 		};
 		BD3F6E9C198D653500DFECD9 /* Categories */ = {
@@ -446,11 +469,15 @@
 				BD2054F8198B955C0047DD07 /* TODOTaskListViewController.xib in Resources */,
 				BD3F6EBC198D7DD600DFECD9 /* taskListBackgroundImage@2x.png in Resources */,
 				BD697E33198F7F6500D61717 /* TODOUserViewController.xib in Resources */,
+				BD30D1A81992274D00A3F038 /* Default.png in Resources */,
 				BD30D1961990E00D00A3F038 /* green-background@2x.png in Resources */,
 				BD3F6EBA198D7DD600DFECD9 /* ShoppingList_Icon@2x.png in Resources */,
 				BD3F6EB5198D7DD600DFECD9 /* HomeMenuIcon.png in Resources */,
+				BD30D1AA1992274D00A3F038 /* Default–568h@2x.png in Resources */,
 				BD3F6EA9198D6BAF00DFECD9 /* TODOTaskManagerViewController.xib in Resources */,
 				BD3F6EB8198D7DD600DFECD9 /* SettingsMenuIcon@2x.png in Resources */,
+				BD30D1AC199227B300A3F038 /* Icon.png in Resources */,
+				BD30D1A91992274D00A3F038 /* Default@2x.png in Resources */,
 				BD3F6EA4198D670A00DFECD9 /* TODOContainerViewController.xib in Resources */,
 				BD3F6EB7198D7DD600DFECD9 /* SettingsMenuIcon.png in Resources */,
 				BD30D1951990E00D00A3F038 /* green-background.png in Resources */,
@@ -504,6 +531,7 @@
 			files = (
 				BDAE164D198F9569008D7AF6 /* NSString+Additions.m in Sources */,
 				BDAE1649198F8C5E008D7AF6 /* User.m in Sources */,
+				BD30D19D1992181A00A3F038 /* TODOContainerViewControllerTests.m in Sources */,
 				BD205507198BA7750047DD07 /* Base.m in Sources */,
 				BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */,
 				BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */,
@@ -617,8 +645,6 @@
 		BD2054B9198A7D8E0047DD07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alexandru Stan (ERGM3KEV5Q)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDo/ToDo-Prefix.pch";
@@ -631,8 +657,6 @@
 		BD2054BA198A7D8E0047DD07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDo/ToDo-Prefix.pch";
 				INFOPLIST_FILE = "ToDo/ToDo-Info.plist";

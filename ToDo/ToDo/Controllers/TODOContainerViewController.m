@@ -58,12 +58,15 @@
   [taskManagerVC editTask:task];
   [self addTaskPressed:nil];
 }
+-(UIViewController*)currentViewController {
+  return currentDetailViewController;
+}
 #pragma mark - App Navigation Logic
 
 - (void)swapCurrentControllerWith:(UIViewController*)viewController{
   if (!currentDetailViewController) {
-    viewController.view.frame = CGRectMake(0, 0, container.bounds.size.width, container.bounds.size.height);
-    [container addSubview:viewController.view];
+    viewController.view.frame = CGRectMake(0, 0, _container.bounds.size.width, _container.bounds.size.height);
+    [_container addSubview:viewController.view];
     currentDetailViewController = viewController;
     return;
   }
@@ -71,9 +74,9 @@
     return;
   }
   isSwitchingVC = YES;
-  viewController.view.frame = CGRectMake(0, 0, container.bounds.size.width, container.bounds.size.height);
+  viewController.view.frame = CGRectMake(0, 0, _container.bounds.size.width, _container.bounds.size.height);
   viewController.view.alpha = 0.0;
-  [container addSubview:viewController.view];
+  [_container addSubview:viewController.view];
   
   [currentDetailViewController viewWillDisappear:YES];
   [viewController viewWillAppear:YES];
