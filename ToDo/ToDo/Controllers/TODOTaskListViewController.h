@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TODOTaskListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+@interface TODOTaskListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate> {
   
 }
 

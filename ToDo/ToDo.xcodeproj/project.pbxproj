@@ -28,6 +28,17 @@
 		BD20550A198BA7750047DD07 /* TODOStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2054C5198A802D0047DD07 /* TODOStorageManager.m */; };
 		BD20550E198BAE3D0047DD07 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD20550D198BAE3D0047DD07 /* UserTests.m */; };
 		BD20550F198BB0A80047DD07 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD2054F9198B9D560047DD07 /* Model.xcdatamodeld */; };
+		BD2FFAC41992500600DDEE7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD20548B198A7D8D0047DD07 /* CoreGraphics.framework */; };
+		BD2FFAD21992592600DDEE7E /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2FFACF199258F200DDEE7E /* libKIF.a */; };
+		BD2FFAD51992597300DDEE7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2FFAD41992597300DDEE7E /* Default-568h@2x.png */; };
+		BD2FFAE019925C2600DDEE7E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2054A7198A7D8E0047DD07 /* XCTest.framework */; };
+		BD2FFAE119925C2600DDEE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD205489198A7D8D0047DD07 /* Foundation.framework */; };
+		BD2FFAE219925C2600DDEE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD20548D198A7D8D0047DD07 /* UIKit.framework */; };
+		BD2FFAE819925C2600DDEE7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2FFAE619925C2600DDEE7E /* InfoPlist.strings */; };
+		BD2FFAF119925C4100DDEE7E /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2FFACF199258F200DDEE7E /* libKIF.a */; };
+		BD2FFAF219925C4900DDEE7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD20548B198A7D8D0047DD07 /* CoreGraphics.framework */; };
+		BD2FFAFA1992613100DDEE7E /* TODOAppNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2FFAF81992613100DDEE7E /* TODOAppNavigation.m */; };
+		BD2FFAFD1992619A00DDEE7E /* KIFUITestActor+TODOActor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2FFAFC1992619A00DDEE7E /* KIFUITestActor+TODOActor.m */; };
 		BD30D1951990E00D00A3F038 /* green-background.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1931990E00D00A3F038 /* green-background.png */; };
 		BD30D1961990E00D00A3F038 /* green-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD30D1941990E00D00A3F038 /* green-background@2x.png */; };
 		BD30D19D1992181A00A3F038 /* TODOContainerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD30D19C1992181A00A3F038 /* TODOContainerViewControllerTests.m */; };
@@ -74,6 +85,27 @@
 			remoteGlobalIDString = BD205485198A7D8D0047DD07;
 			remoteInfo = ToDo;
 		};
+		BD2FFACE199258F200DDEE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD2FFAC8199258F200DDEE7E /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EABD46AA1857A0C700A5F081;
+			remoteInfo = KIF;
+		};
+		BD2FFAEC19925C2600DDEE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD20547E198A7D8D0047DD07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD205485198A7D8D0047DD07;
+			remoteInfo = ToDo;
+		};
+		BD2FFAF419925D9D00DDEE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD2FFAC8199258F200DDEE7E /* KIF.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EABD46791857A0C700A5F081;
+			remoteInfo = KIF;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +135,16 @@
 		BD205502198BA3A50047DD07 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		BD205503198BA3A50047DD07 /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
 		BD20550D198BAE3D0047DD07 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		BD2FFAC8199258F200DDEE7E /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = "ToDoTests/KIF-master/KIF.xcodeproj"; sourceTree = "<group>"; };
+		BD2FFAD41992597300DDEE7E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BD2FFADF19925C2600DDEE7E /* UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2FFAE519925C2600DDEE7E /* UI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UI Tests-Info.plist"; sourceTree = "<group>"; };
+		BD2FFAE719925C2600DDEE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD2FFAEB19925C2600DDEE7E /* UI Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI Tests-Prefix.pch"; sourceTree = "<group>"; };
+		BD2FFAF81992613100DDEE7E /* TODOAppNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOAppNavigation.m; sourceTree = "<group>"; };
+		BD2FFAFB1992619A00DDEE7E /* KIFUITestActor+TODOActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFUITestActor+TODOActor.h"; sourceTree = "<group>"; };
+		BD2FFAFC1992619A00DDEE7E /* KIFUITestActor+TODOActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFUITestActor+TODOActor.m"; sourceTree = "<group>"; };
+		BD2FFB311992648C00DDEE7E /* ToDo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ToDo copy-Info.plist"; path = "/Users/geminimac-i5/ToDo-List/ToDo/ToDo copy-Info.plist"; sourceTree = "<absolute>"; };
 		BD30D1931990E00D00A3F038 /* green-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-background.png"; sourceTree = "<group>"; };
 		BD30D1941990E00D00A3F038 /* green-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-background@2x.png"; sourceTree = "<group>"; };
 		BD30D19C1992181A00A3F038 /* TODOContainerViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TODOContainerViewControllerTests.m; sourceTree = "<group>"; };
@@ -167,10 +209,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2FFAD21992592600DDEE7E /* libKIF.a in Frameworks */,
+				BD2FFAC41992500600DDEE7E /* CoreGraphics.framework in Frameworks */,
 				BD2054A8198A7D8E0047DD07 /* XCTest.framework in Frameworks */,
 				BD2054AB198A7D8E0047DD07 /* CoreData.framework in Frameworks */,
 				BD2054AA198A7D8E0047DD07 /* UIKit.framework in Frameworks */,
 				BD2054A9198A7D8E0047DD07 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD2FFADC19925C2600DDEE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2FFAF219925C4900DDEE7E /* CoreGraphics.framework in Frameworks */,
+				BD2FFAF119925C4100DDEE7E /* libKIF.a in Frameworks */,
+				BD2FFAE019925C2600DDEE7E /* XCTest.framework in Frameworks */,
+				BD2FFAE219925C2600DDEE7E /* UIKit.framework in Frameworks */,
+				BD2FFAE119925C2600DDEE7E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,10 +236,13 @@
 		BD20547D198A7D8D0047DD07 = {
 			isa = PBXGroup;
 			children = (
+				BD2FFAD41992597300DDEE7E /* Default-568h@2x.png */,
 				BD205491198A7D8D0047DD07 /* ToDo */,
 				BD2054AE198A7D8E0047DD07 /* ToDoTests */,
+				BD2FFAE319925C2600DDEE7E /* UI Tests */,
 				BD205488198A7D8D0047DD07 /* Frameworks */,
 				BD205487198A7D8D0047DD07 /* Products */,
+				BD2FFB311992648C00DDEE7E /* ToDo copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +251,7 @@
 			children = (
 				BD205486198A7D8D0047DD07 /* ToDo.app */,
 				BD2054A6198A7D8E0047DD07 /* ToDoTests.xctest */,
+				BD2FFADF19925C2600DDEE7E /* UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +259,7 @@
 		BD205488198A7D8D0047DD07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD2FFAC8199258F200DDEE7E /* KIF.xcodeproj */,
 				BD205489198A7D8D0047DD07 /* Foundation.framework */,
 				BD20548B198A7D8D0047DD07 /* CoreGraphics.framework */,
 				BD20548D198A7D8D0047DD07 /* UIKit.framework */,
@@ -364,6 +425,35 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		BD2FFAC9199258F200DDEE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD2FFACF199258F200DDEE7E /* libKIF.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD2FFAE319925C2600DDEE7E /* UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BD2FFAF81992613100DDEE7E /* TODOAppNavigation.m */,
+				BD2FFAFB1992619A00DDEE7E /* KIFUITestActor+TODOActor.h */,
+				BD2FFAFC1992619A00DDEE7E /* KIFUITestActor+TODOActor.m */,
+				BD2FFAE419925C2600DDEE7E /* Supporting Files */,
+			);
+			path = "UI Tests";
+			sourceTree = "<group>";
+		};
+		BD2FFAE419925C2600DDEE7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD2FFAE519925C2600DDEE7E /* UI Tests-Info.plist */,
+				BD2FFAE619925C2600DDEE7E /* InfoPlist.strings */,
+				BD2FFAEB19925C2600DDEE7E /* UI Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BD30D1A41992274D00A3F038 /* App Launch and Icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +518,25 @@
 			productReference = BD2054A6198A7D8E0047DD07 /* ToDoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BD2FFADE19925C2600DDEE7E /* UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD2FFAEE19925C2600DDEE7E /* Build configuration list for PBXNativeTarget "UI Tests" */;
+			buildPhases = (
+				BD2FFADB19925C2600DDEE7E /* Sources */,
+				BD2FFADC19925C2600DDEE7E /* Frameworks */,
+				BD2FFADD19925C2600DDEE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD2FFAF519925D9D00DDEE7E /* PBXTargetDependency */,
+				BD2FFAED19925C2600DDEE7E /* PBXTargetDependency */,
+			);
+			name = "UI Tests";
+			productName = "UI Tests";
+			productReference = BD2FFADF19925C2600DDEE7E /* UI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -439,6 +548,9 @@
 				ORGANIZATIONNAME = "Stan Alexandru";
 				TargetAttributes = {
 					BD2054A5198A7D8E0047DD07 = {
+						TestTargetID = BD205485198A7D8D0047DD07;
+					};
+					BD2FFADE19925C2600DDEE7E = {
 						TestTargetID = BD205485198A7D8D0047DD07;
 					};
 				};
@@ -453,13 +565,30 @@
 			mainGroup = BD20547D198A7D8D0047DD07;
 			productRefGroup = BD205487198A7D8D0047DD07 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BD2FFAC9199258F200DDEE7E /* Products */;
+					ProjectRef = BD2FFAC8199258F200DDEE7E /* KIF.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BD205485198A7D8D0047DD07 /* ToDo */,
+				BD2FFADE19925C2600DDEE7E /* UI Tests */,
 				BD2054A5198A7D8E0047DD07 /* ToDoTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BD2FFACF199258F200DDEE7E /* libKIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKIF.a;
+			remoteRef = BD2FFACE199258F200DDEE7E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD205484198A7D8D0047DD07 /* Resources */ = {
@@ -479,6 +608,7 @@
 				BD30D1AC199227B300A3F038 /* Icon.png in Resources */,
 				BD30D1A91992274D00A3F038 /* Default@2x.png in Resources */,
 				BD3F6EA4198D670A00DFECD9 /* TODOContainerViewController.xib in Resources */,
+				BD2FFAD51992597300DDEE7E /* Default-568h@2x.png in Resources */,
 				BD3F6EB7198D7DD600DFECD9 /* SettingsMenuIcon.png in Resources */,
 				BD30D1951990E00D00A3F038 /* green-background.png in Resources */,
 				BD3F6EB9198D7DD600DFECD9 /* ShoppingList_Icon.png in Resources */,
@@ -493,6 +623,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2054B3198A7D8E0047DD07 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD2FFADD19925C2600DDEE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2FFAE819925C2600DDEE7E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +680,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD2FFADB19925C2600DDEE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2FFAFD1992619A00DDEE7E /* KIFUITestActor+TODOActor.m in Sources */,
+				BD2FFAFA1992613100DDEE7E /* TODOAppNavigation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -549,6 +696,16 @@
 			isa = PBXTargetDependency;
 			target = BD205485198A7D8D0047DD07 /* ToDo */;
 			targetProxy = BD2054AC198A7D8E0047DD07 /* PBXContainerItemProxy */;
+		};
+		BD2FFAED19925C2600DDEE7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD205485198A7D8D0047DD07 /* ToDo */;
+			targetProxy = BD2FFAEC19925C2600DDEE7E /* PBXContainerItemProxy */;
+		};
+		BD2FFAF519925D9D00DDEE7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KIF;
+			targetProxy = BD2FFAF419925D9D00DDEE7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -565,6 +722,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				BD2054E6198B88820047DD07 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD2FFAE619925C2600DDEE7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD2FFAE719925C2600DDEE7E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -649,6 +814,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDo/ToDo-Prefix.pch";
 				INFOPLIST_FILE = "ToDo/ToDo-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -660,6 +830,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDo/ToDo-Prefix.pch";
 				INFOPLIST_FILE = "ToDo/ToDo-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -679,8 +854,15 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"KIF_XCTEST=1",
 				);
 				INFOPLIST_FILE = "ToDoTests/ToDoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -699,6 +881,64 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToDo/ToDo-Prefix.pch";
 				INFOPLIST_FILE = "ToDoTests/ToDoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		BD2FFAEF19925C2600DDEE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToDo.app/ToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UI Tests/UI Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KIF_XCTEST;
+				INFOPLIST_FILE = "UI Tests/UI Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BD2FFAF019925C2600DDEE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ToDo.app/ToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UI Tests/UI Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KIF_XCTEST;
+				INFOPLIST_FILE = "UI Tests/UI Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -731,6 +971,15 @@
 			buildConfigurations = (
 				BD2054BC198A7D8E0047DD07 /* Debug */,
 				BD2054BD198A7D8E0047DD07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD2FFAEE19925C2600DDEE7E /* Build configuration list for PBXNativeTarget "UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD2FFAEF19925C2600DDEE7E /* Debug */,
+				BD2FFAF019925C2600DDEE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

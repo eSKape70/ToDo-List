@@ -58,11 +58,11 @@
   return [allTasks count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//  Task *task = [allTasks objectAtIndex:indexPath.row];
-//  if (task.note && [task.note length]) {
-//    return 100;
-//  }
-  return 60;
+  Task *task = [allTasks objectAtIndex:indexPath.row];
+  if (task.note && [task.note length]) {
+    return 60;
+  }
+  return 40;
 }
 - (UITableViewCell *)tableView:(UITableView *)thisTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   //TODO
@@ -74,7 +74,10 @@
       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:TASK_CELL_IDENTIFIER_NOTE];
     
     cell.detailTextLabel.text = task.note;
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    if (task.completed)
+      cell.detailTextLabel.textColor = [UIColor greenColor];
+    else
+      cell.detailTextLabel.textColor = [UIColor whiteColor];
   } else {
     cell = (UITableViewCell*)[tableView dequeueReusableCellWithIdentifier:TASK_CELL_IDENTIFIER_SIMPLE];
     if (!cell)
@@ -82,10 +85,27 @@
   }
   [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
   cell.textLabel.text = task.title;
-  cell.textLabel.textColor = [UIColor whiteColor];
+
   
   cell.backgroundColor = (indexPath.row%2?[UIColor semiTransparentLightColor]:[UIColor semiTransparentDarkColor]);
   //cell.backgroundColor = [UIColor clearColor];
+  if (task.completed) {
+    cell.textLabel.textColor = [UIColor greenColor];
+  } else {
+    cell.textLabel.textColor = [UIColor whiteColor];
+  }
+  
+  if ([cell.contentView.gestureRecognizers count]) {
+    for (UIGestureRecognizer *gesture in cell.contentView.gestureRecognizers) {
+      [cell.contentView removeGestureRecognizer:gesture];
+    }
+  }
+  if (!task.completed) {
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didCompleteTask:)];
+    [swipe setDelegate:self];
+    [cell.contentView addGestureRecognizer:swipe];
+    cell.contentView.tag = indexPath.row;
+  }
   return cell;
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -99,6 +119,7 @@
 - (void)tableView:(UITableView *)thisTableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
   if (editingStyle == UITableViewCellEditingStyleDelete) {
     Task *task = [allTasks objectAtIndex:indexPath.row];
+    task.toAdd = [NSNumber numberWithBool:NO];
     task.toDelete = [NSNumber numberWithBool:YES];
     task.modified = [NSDate new];
     [task save];
@@ -113,5 +134,20 @@
 }
 - (void)tableView:(UITableView *)thisTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [[TODOContainerViewController singleton] editTask:[allTasks objectAtIndex:indexPath.row]];
+}
+- (void)didCompleteTask:(UISwipeGestureRecognizer *)gesture {
+  NSIndexPath *index = [NSIndexPath indexPathForRow:gesture.view.tag inSection:0];
+  Task *task = [allTasks objectAtIndex:index.row];
+  task.completed = [NSDate new];
+  task.modified = [NSDate new];
+  if (!task.toAdd || [task.toAdd boolValue] == NO) {
+    task.toUpdate = @(YES);
+  }
+  [task save];
+  [self reloadAllData];
+//  [tableView beginUpdates];
+//  [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:index] withRowAnimation:UITableViewRowAnimationFade];
+//  [tableView endUpdates];
+  [[TODOStorageManager singleton] syncTasksOnComplete:nil];
 }
 @end

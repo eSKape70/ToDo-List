@@ -22,4 +22,6 @@
 #define ADD_TASK  @"Add Task"
 #define RELOG     @"Relog"
 #define LOGIN     @"Login"
+
+#define TAG_COMPLETED @"101"
 #endif

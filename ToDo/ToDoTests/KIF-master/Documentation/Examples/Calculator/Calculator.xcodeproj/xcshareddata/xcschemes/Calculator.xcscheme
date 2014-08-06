@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD205485198A7D8D0047DD07"
-               BuildableName = "ToDo.app"
-               BlueprintName = "ToDo"
-               ReferencedContainer = "container:ToDo.xcodeproj">
+               BlueprintIdentifier = "EB4C30D8167B9E3A00E31109"
+               BuildableName = "Calculator.app"
+               BlueprintName = "Calculator"
+               ReferencedContainer = "container:Calculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,35 +32,25 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD2054A5198A7D8E0047DD07"
-               BuildableName = "ToDoTests.xctest"
-               BlueprintName = "ToDoTests"
-               ReferencedContainer = "container:ToDo.xcodeproj">
+               BlueprintIdentifier = "EB4C313E167BA79700E31109"
+               BuildableName = "Acceptance Tests.octest"
+               BlueprintName = "Acceptance Tests"
+               ReferencedContainer = "container:Calculator.xcodeproj">
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "TODOAppNavigation">
+                  Identifier = "BasicCalculatorTests/testToFail">
                </Test>
             </SkippedTests>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BD2FFADE19925C2600DDEE7E"
-               BuildableName = "UI Tests.xctest"
-               BlueprintName = "UI Tests"
-               ReferencedContainer = "container:ToDo.xcodeproj">
-            </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD205485198A7D8D0047DD07"
-            BuildableName = "ToDo.app"
-            BlueprintName = "ToDo"
-            ReferencedContainer = "container:ToDo.xcodeproj">
+            BlueprintIdentifier = "EB4C30D8167B9E3A00E31109"
+            BuildableName = "Calculator.app"
+            BlueprintName = "Calculator"
+            ReferencedContainer = "container:Calculator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +66,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD205485198A7D8D0047DD07"
-            BuildableName = "ToDo.app"
-            BlueprintName = "ToDo"
-            ReferencedContainer = "container:ToDo.xcodeproj">
+            BlueprintIdentifier = "EB4C30D8167B9E3A00E31109"
+            BuildableName = "Calculator.app"
+            BlueprintName = "Calculator"
+            ReferencedContainer = "container:Calculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +84,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BD205485198A7D8D0047DD07"
-            BuildableName = "ToDo.app"
-            BlueprintName = "ToDo"
-            ReferencedContainer = "container:ToDo.xcodeproj">
+            BlueprintIdentifier = "EB4C30D8167B9E3A00E31109"
+            BuildableName = "Calculator.app"
+            BlueprintName = "Calculator"
+            ReferencedContainer = "container:Calculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
